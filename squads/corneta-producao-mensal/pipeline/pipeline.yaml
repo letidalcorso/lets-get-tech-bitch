@@ -1,0 +1,66 @@
+name: corneta-producao-mensal
+description: Pipeline de produção mensal de conteúdo para Corneta Jogos (@soucorneta e @fazoubebe)
+
+steps:
+  - id: step-01-contexto-mes
+    name: Contexto do Mês
+    type: checkpoint
+    file: steps/step-01-contexto-mes.md
+
+  - id: step-02-marina-360
+    name: Plano Estratégico 360
+    agent: marina-360
+    execution: inline
+    model_tier: powerful
+    file: steps/step-02-marina-360.md
+
+  - id: step-03-lucas-calendario
+    name: Calendário Editorial
+    agent: lucas-calendario
+    execution: inline
+    model_tier: powerful
+    file: steps/step-03-lucas-calendario.md
+
+  - id: step-04-aprovar-plano
+    name: Aprovar Plano + Calendário
+    type: checkpoint
+    file: steps/step-04-aprovar-plano.md
+
+  - id: step-05-camila-corneta
+    name: Produção @soucorneta (20 posts)
+    agent: camila-corneta
+    execution: subagent
+    model_tier: powerful
+    file: steps/step-05-camila-corneta.md
+
+  - id: step-06-pedro-fazoubebe
+    name: Produção @fazoubebe (20 posts)
+    agent: pedro-fazoubebe
+    execution: subagent
+    model_tier: powerful
+    file: steps/step-06-pedro-fazoubebe.md
+
+  - id: step-07-roberta-roteiros
+    name: Roteiros de UGC (15 roteiros)
+    agent: roberta-roteiros
+    execution: subagent
+    model_tier: powerful
+    file: steps/step-07-roberta-roteiros.md
+
+  - id: step-08-renata-revisao
+    name: Revisão e Pontuação Final
+    agent: renata-revisao
+    execution: inline
+    file: steps/step-08-renata-revisao.md
+
+  - id: step-09-aprovacao-final
+    name: Aprovação e Entrega
+    type: checkpoint
+    file: steps/step-09-aprovacao-final.md
+
+  - id: step-10-valentina-figma
+    name: Criação de Designs no Figma (sob demanda)
+    agent: valentina-figma
+    execution: inline
+    optional: true
+    file: steps/step-10-valentina-figma.md

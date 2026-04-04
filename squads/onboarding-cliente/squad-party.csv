@@ -1,0 +1,6 @@
+id,name,title,icon,execution,path
+silvio-scope,Sílvio Scope,Leitor de Escopo,📋,subagent,./agents/silvio-scope.agent.md
+eduardo-entrevista,Eduardo Entrevista,Entrevistador de Clientes,🎙️,inline,./agents/eduardo-entrevista.agent.md
+carlos-concorrencia,Carlos Concorrência,Analista de Mercado,🔍,subagent,./agents/carlos-concorrencia.agent.md
+beatriz-briefing,Beatriz Briefing,Estrategista e Redatora,📄,inline,./agents/beatriz-briefing.agent.md
+renata-revisao,Renata Revisão,Revisora de Qualidade,✅,inline,./agents/renata-revisao.agent.md

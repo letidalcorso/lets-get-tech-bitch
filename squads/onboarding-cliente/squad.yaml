@@ -1,0 +1,63 @@
+name: onboarding-cliente
+description: >
+  Squad de onboarding de novos clientes da agência. Lê a proposta comercial aprovada,
+  conduz uma entrevista interativa de descoberta, pesquisa concorrentes, e produz um
+  briefing de marketing completo com escopo estruturado para alimentar a produção de conteúdo.
+version: "1.0.0"
+created: "2026-03-28"
+mode: alta-performance
+
+investigation:
+  enriched: false
+
+skills:
+  - web_search
+  - web_fetch
+
+data:
+  - pipeline/data/research-brief.md
+  - pipeline/data/domain-framework.md
+  - pipeline/data/quality-criteria.md
+  - pipeline/data/output-examples.md
+  - pipeline/data/anti-patterns.md
+
+agents:
+  - id: silvio-scope
+    path: ./agents/silvio-scope.agent.md
+  - id: eduardo-entrevista
+    path: ./agents/eduardo-entrevista.agent.md
+  - id: carlos-concorrencia
+    path: ./agents/carlos-concorrencia.agent.md
+  - id: beatriz-briefing
+    path: ./agents/beatriz-briefing.agent.md
+  - id: renata-revisao
+    path: ./agents/renata-revisao.agent.md
+
+pipeline:
+  entry: pipeline/pipeline.yaml
+  steps:
+    - step: pipeline/steps/step-01-upload-proposta.md
+      type: checkpoint
+    - step: pipeline/steps/step-02-silvio-scope.md
+      agent: silvio-scope
+      execution: subagent
+    - step: pipeline/steps/step-03-confirmar-escopo.md
+      type: checkpoint
+    - step: pipeline/steps/step-04-dados-iniciais.md
+      type: checkpoint
+    - step: pipeline/steps/step-05-eduardo-entrevista.md
+      agent: eduardo-entrevista
+      execution: inline
+    - step: pipeline/steps/step-06-validar-dados.md
+      type: checkpoint
+    - step: pipeline/steps/step-07-carlos-concorrencia.md
+      agent: carlos-concorrencia
+      execution: subagent
+    - step: pipeline/steps/step-08-beatriz-briefing.md
+      agent: beatriz-briefing
+      execution: inline
+    - step: pipeline/steps/step-09-renata-revisao.md
+      agent: renata-revisao
+      execution: inline
+    - step: pipeline/steps/step-10-aprovacao-final.md
+      type: checkpoint

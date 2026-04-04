@@ -1,0 +1,4 @@
+id,name,title,icon,execution,path
+fernanda-estrategia,Fernanda Estratégia,Estrategista de Conteúdo,🧭,inline,./agents/fernanda-estrategia.agent.md
+lucas-calendario,Lucas Calendário,Editor de Conteúdo,📅,inline,./agents/lucas-calendario.agent.md
+valentina-figma,Valentina Figma,Designer de Conteúdo,🎨,inline,./agents/valentina-figma.agent.md

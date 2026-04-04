@@ -1,0 +1,8 @@
+id,name,title,icon,execution,path
+marina-360,Marina 360,Estrategista Integrada,🧭,inline,./agents/marina-360.agent.md
+lucas-calendario,Lucas Calendário,Editor de Conteúdo,📅,inline,./agents/lucas-calendario.agent.md
+camila-corneta,Camila Corneta,Redatora @soucorneta,🟠,subagent,./agents/camila-corneta.agent.md
+pedro-fazoubebe,Pedro Faz ou Bebe,Redator @fazoubebe,🍺,subagent,./agents/pedro-fazoubebe.agent.md
+roberta-roteiros,Roberta Roteiros,Roteirista de UGC,🎬,subagent,./agents/roberta-roteiros.agent.md
+renata-revisao,Renata Revisão,Revisora de Qualidade,✅,inline,./agents/renata-revisao.agent.md
+valentina-figma,Valentina Figma,Designer de Conteúdo,🎨,inline,./agents/valentina-figma.agent.md

@@ -1,0 +1,32 @@
+# Dependências
+node_modules/
+**/node_modules/
+
+# Ambiente (segredos e tokens)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+_opensquad/logs/
+
+# Outputs e estado de execução (runtime)
+squads/*/output/
+squads/*/state.json
+opensquad/temp/
+
+# Memória privada do agente
+_opensquad/_memory/company.md
+_opensquad/_memory/preferences.md
+_opensquad/_browser_profile/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+skills/opensquad-skill-creator/eval-viewer/viewer 2.html

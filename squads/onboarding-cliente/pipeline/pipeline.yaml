@@ -1,0 +1,60 @@
+name: onboarding-cliente
+description: Pipeline completo de onboarding de novo cliente de agência de marketing
+
+steps:
+  - id: step-01-upload-proposta
+    name: Upload da Proposta Aprovada
+    type: checkpoint
+    file: steps/step-01-upload-proposta.md
+
+  - id: step-02-silvio-scope
+    name: Leitura e Extração do Escopo
+    agent: silvio-scope
+    execution: subagent
+    model_tier: powerful
+    file: steps/step-02-silvio-scope.md
+
+  - id: step-03-confirmar-escopo
+    name: Confirmar Escopo Extraído
+    type: checkpoint
+    file: steps/step-03-confirmar-escopo.md
+
+  - id: step-04-dados-iniciais
+    name: Dados Iniciais do Cliente
+    type: checkpoint
+    file: steps/step-04-dados-iniciais.md
+
+  - id: step-05-eduardo-entrevista
+    name: Entrevista Interativa de Onboarding
+    agent: eduardo-entrevista
+    execution: inline
+    file: steps/step-05-eduardo-entrevista.md
+
+  - id: step-06-validar-dados
+    name: Validar Dados Coletados
+    type: checkpoint
+    file: steps/step-06-validar-dados.md
+
+  - id: step-07-carlos-concorrencia
+    name: Pesquisa de Mercado e Concorrentes
+    agent: carlos-concorrencia
+    execution: subagent
+    model_tier: powerful
+    file: steps/step-07-carlos-concorrencia.md
+
+  - id: step-08-beatriz-briefing
+    name: Redação do Briefing de Marketing
+    agent: beatriz-briefing
+    execution: inline
+    file: steps/step-08-beatriz-briefing.md
+
+  - id: step-09-renata-revisao
+    name: Revisão e Pontuação do Briefing
+    agent: renata-revisao
+    execution: inline
+    file: steps/step-09-renata-revisao.md
+
+  - id: step-10-aprovacao-final
+    name: Aprovação e Entrega Final
+    type: checkpoint
+    file: steps/step-10-aprovacao-final.md

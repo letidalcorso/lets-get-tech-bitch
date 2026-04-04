@@ -1,0 +1,42 @@
+name: ftemper-planejamento-mensal
+description: >
+  Squad de estratégia e planejamento mensal de conteúdo para a FTemper.
+  Gera o plano estratégico do mês com distribuição pelos 4 pilares de conteúdo
+  e o calendário editorial com os 6 posts do Instagram (@ftempercomponentes),
+  incluindo formato, pilar, tema e briefing de cada post.
+version: "1.0.0"
+created: "2026-03-29"
+client: ftemper
+mode: alta-performance
+
+briefing:
+  path: clientes/ftemper/briefing.md
+
+agents:
+  - id: fernanda-estrategia
+    path: ./agents/fernanda-estrategia.agent.md
+  - id: lucas-calendario
+    path: ./agents/lucas-calendario.agent.md
+  - id: valentina-figma
+    path: ./agents/valentina-figma.agent.md
+
+skills:
+  - figma
+
+pipeline:
+  entry: pipeline/pipeline.yaml
+  steps:
+    - step: pipeline/steps/step-01-contexto-mes.md
+      type: checkpoint
+    - step: pipeline/steps/step-02-fernanda-estrategia.md
+      agent: fernanda-estrategia
+      execution: inline
+    - step: pipeline/steps/step-03-lucas-calendario.md
+      agent: lucas-calendario
+      execution: inline
+    - step: pipeline/steps/step-04-aprovacao-final.md
+      type: checkpoint
+    - step: pipeline/steps/step-05-valentina-figma.md
+      agent: valentina-figma
+      execution: inline
+      optional: true
