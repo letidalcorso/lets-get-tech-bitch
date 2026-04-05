@@ -1,12 +1,12 @@
 ---
-agent: art-director
+agent: sofia-visual
 execution: inline
 outputFile: squads/ftemper-planejamento-mensal/output/briefing-visual.md
 ---
 
 # Step 07 — Marina Direção: Briefing Visual
 
-**Agente:** Marina Direção 🎯
+**Agente:** Sofia Visual 🎯
 **Objetivo:** Criar o briefing visual detalhado para cada um dos 6 posts — composição, paleta, referência fotográfica, prompt de imagem e template Figma a usar.
 
 ---

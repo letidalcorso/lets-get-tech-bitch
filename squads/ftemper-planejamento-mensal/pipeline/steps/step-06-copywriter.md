@@ -1,5 +1,5 @@
 ---
-agent: copywriter
+agent: ana-copy
 execution: inline
 format: instagram-feed
 outputFile: squads/ftemper-planejamento-mensal/output/textos-e-legendas.md
@@ -7,7 +7,7 @@ outputFile: squads/ftemper-planejamento-mensal/output/textos-e-legendas.md
 
 # Step 06 — Rafael Copy: Textos e Legendas
 
-**Agente:** Rafael Copy ✍️
+**Agente:** Ana Copy ✍️
 **Objetivo:** Criar o texto principal da arte (headline) e a legenda completa do Instagram para cada um dos 6 posts aprovados no calendário editorial.
 
 ---

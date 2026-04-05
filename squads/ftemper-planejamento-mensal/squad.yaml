@@ -19,10 +19,10 @@ agents:
     path: ./agents/fernanda-estrategia.agent.md
   - id: lucas-calendario
     path: ./agents/lucas-calendario.agent.md
-  - id: copywriter
-    path: ./agents/copywriter.agent.md
-  - id: art-director
-    path: ./agents/art-director.agent.md
+  - id: ana-copy
+    path: ./agents/ana-copy.agent.md
+  - id: sofia-visual
+    path: ./agents/sofia-visual.agent.md
   - id: valentina-figma
     path: ./agents/valentina-figma.agent.md
 
