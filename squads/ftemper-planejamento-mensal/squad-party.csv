@@ -1,4 +1,6 @@
 id,name,title,icon,execution,path
 fernanda-estrategia,Fernanda Estratégia,Estrategista de Conteúdo,🧭,inline,./agents/fernanda-estrategia.agent.md
 lucas-calendario,Lucas Calendário,Editor de Conteúdo,📅,inline,./agents/lucas-calendario.agent.md
+copywriter,Rafael Copy,Copywriter de Conteúdo Técnico,✍️,inline,./agents/copywriter.agent.md
+art-director,Marina Direção,Art Director de Conteúdo,🎯,inline,./agents/art-director.agent.md
 valentina-figma,Valentina Figma,Designer de Conteúdo,🎨,inline,./agents/valentina-figma.agent.md
