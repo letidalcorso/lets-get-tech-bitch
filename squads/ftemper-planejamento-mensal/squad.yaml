@@ -3,7 +3,7 @@ description: >
   Squad de planejamento e produção mensal de conteúdo para a FTemper.
   Cobre todo o ciclo: investigação de mercado (Sherlock), estratégia e calendário
   editorial (Fernanda + Lucas), aprovação da pauta, produção de copy e legendas
-  (Rafael Copy), briefing visual e prompts (Marina Direção) e criação das artes
+  (Ana Copy), briefing visual e prompts (Sofia Visual) e criação das artes
   no Figma (Valentina) — com checkpoints de aprovação em pontos críticos.
 version: "2.0.0"
 created: "2026-03-29"
@@ -45,10 +45,10 @@ pipeline:
     - step: pipeline/steps/step-05-aprovacao-pauta.md
       type: checkpoint
     - step: pipeline/steps/step-06-copywriter.md
-      agent: copywriter
+      agent: ana-copy
       execution: inline
     - step: pipeline/steps/step-07-art-director.md
-      agent: art-director
+      agent: sofia-visual
       execution: inline
     - step: pipeline/steps/step-05-valentina-figma.md
       agent: valentina-figma
