@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — SmartBase | Fale com a Gente</title>
+  <meta name="description" content="Entre em contato com a SmartBase. Tire dúvidas, faça uma avaliação de troca ou solicite consultoria. Caxias do Sul, RS.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-mark">
+            <span class="nav__logo-dot"></span>
+            <span class="nav__logo-text"><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+          </div>
+        </a>
+        <ul class="nav__links">
+          <li><a href="produtos.html" class="nav__link">Produtos</a></li>
+          <li><a href="index.html#troca" class="nav__link">Troca</a></li>
+          <li><a href="sobre.html" class="nav__link">Sobre</a></li>
+          <li><a href="blog.html" class="nav__link">Blog</a></li>
+          <li><a href="contato.html" class="nav__link is-active">Contato</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="https://www.smartbase.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver loja</a>
+          <button class="nav__hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="nav__mobile-menu">
+        <a href="produtos.html" class="nav__link">Produtos</a>
+        <a href="index.html#troca" class="nav__link">Troca</a>
+        <a href="sobre.html" class="nav__link">Sobre</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contato.html" class="nav__link">Contato</a>
+        <a href="https://www.smartbase.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver loja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Coluna esquerda — Informações -->
+        <div data-animate>
+          <p class="section-label">Fale com a gente</p>
+          <h1 class="contact-info__title">começa com<br>uma conversa.</h1>
+          <p class="contact-info__subtitle">
+            Sem pressão, sem script. Conta o que você precisa — um aparelho novo, uma troca,
+            ou só uma dúvida — e a gente te orienta.
+          </p>
+
+          <div class="contact-channels">
+            <a href="https://wa.me/5554XXXXXXXX?text=Oi!%20Quero%20falar%20com%20a%20SmartBase." class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel__icon">💬</div>
+              <div>
+                <p class="contact-channel__label">WhatsApp — mais rápido</p>
+                <p class="contact-channel__value">(54) XXXX-XXXX</p>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/smartbase" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel__icon">📸</div>
+              <div>
+                <p class="contact-channel__label">Instagram</p>
+                <p class="contact-channel__value">@smartbase</p>
+              </div>
+            </a>
+
+            <div class="contact-channel">
+              <div class="contact-channel__icon">📍</div>
+              <div>
+                <p class="contact-channel__label">Localização</p>
+                <p class="contact-channel__value">Caxias do Sul e região, RS</p>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="contact-channel__icon">🕐</div>
+              <div>
+                <p class="contact-channel__label">Atendimento</p>
+                <p class="contact-channel__value">Seg–Sex 9h–18h · Sáb 9h–13h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna direita — Formulário -->
+        <div data-animate data-delay="2">
+          <div class="contact-form">
+            <h2 style="color: var(--color-white); font-size: var(--font-size-xl); margin-bottom: var(--space-6);">
+              manda uma mensagem.
+            </h2>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="name">Seu nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Como posso te chamar?"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="whatsapp">WhatsApp</label>
+                <input
+                  type="tel"
+                  id="whatsapp"
+                  name="whatsapp"
+                  class="form-input"
+                  placeholder="(54) 9XXXX-XXXX"
+                  required
+                  autocomplete="tel"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="assunto">O que você precisa?</label>
+                <select id="assunto" name="assunto" class="form-select" style="color: var(--color-text);">
+                  <option value="" disabled selected style="color: var(--color-silver);">Selecione</option>
+                  <option value="comprar">Quero comprar um produto</option>
+                  <option value="troca">Quero fazer uma troca</option>
+                  <option value="suporte">Preciso de suporte técnico</option>
+                  <option value="duvida">Tenho uma dúvida</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="form-textarea"
+                  placeholder="Conta mais sobre o que você precisa..."
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                enviar mensagem →
+              </button>
+
+              <p class="text-xs text-label text-center mt-4">
+                Respondemos em até 2h em horário comercial.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+          <p>Apple a sério. Caxias do Sul e região, RS.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Produtos</p>
+          <ul class="footer__links">
+            <li><a href="produtos.html?cat=iphone" class="footer__link">iPhone</a></li>
+            <li><a href="produtos.html?cat=mac" class="footer__link">Mac</a></li>
+            <li><a href="produtos.html?cat=ipad" class="footer__link">iPad</a></li>
+            <li><a href="produtos.html?cat=acessorios" class="footer__link">Acessórios</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Empresa</p>
+          <ul class="footer__links">
+            <li><a href="sobre.html" class="footer__link">Sobre nós</a></li>
+            <li><a href="index.html#troca" class="footer__link">Troca</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contato.html" class="footer__link">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contato</p>
+          <ul class="footer__links">
+            <li><span class="footer__link">📍 Caxias do Sul, RS</span></li>
+            <li><a href="https://wa.me/5554XXXXXXXX" class="footer__link">💬 WhatsApp</a></li>
+            <li><a href="https://instagram.com/smartbase" class="footer__link">📸 @smartbase</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 SmartBase. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5554XXXXXXXX" class="whatsapp-fab" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Form: redirecionar para WhatsApp
+    document.getElementById('contact-form')?.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const whatsapp = document.getElementById('whatsapp').value.trim();
+      const assunto = document.getElementById('assunto').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!name || !whatsapp) {
+        window.showToast('Preencha seu nome e WhatsApp.'); return;
+      }
+
+      const text = encodeURIComponent(
+        `Oi! Meu nome é ${name}.\n` +
+        (assunto ? `Assunto: ${assunto}\n` : '') +
+        (mensagem ? `\n${mensagem}` : '')
+      );
+
+      window.open(`https://wa.me/5554XXXXXXXX?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+</html>

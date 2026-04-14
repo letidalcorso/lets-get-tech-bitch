@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho — SmartBase</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="{tray_css}">
+  <link rel="stylesheet" href="{store_path}/css/theme.css">
+</head>
+<body class="tray-page tray-page--cart">
+
+  <!-- ========== HEADER ========== -->
+  <header class="tray-header" id="tray-header">
+    <div class="tray-header__inner">
+      <a href="{store_url}" class="tray-header__logo" aria-label="SmartBase">
+        <div class="logo-pill">
+          <span class="logo-pill__dot"></span>
+          <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+        </div>
+      </a>
+      <!-- No search/nav on cart page — reduced distraction -->
+      <div class="tray-header__cart-title">
+        <span>Carrinho</span>
+      </div>
+      <div class="tray-header__actions">
+        <a href="{store_url}" class="tray-btn tray-btn--ghost tray-btn--sm">
+          ← continuar comprando
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="tray-cart-page">
+    <div class="tray-container">
+
+      {if cart_amount > 0}
+
+      <div class="tray-cart-layout">
+
+        <!-- ========== ITENS DO CARRINHO ========== -->
+        <div class="tray-cart-items">
+          <h1 class="tray-cart-title">Seu carrinho <span class="tray-cart-count">({cart_amount} ite{if cart_amount == 1}m{else}ns{/if})</span></h1>
+
+          {foreach items="cart" item="item"}
+          <div class="tray-cart-item" id="cart-item-{item.id}">
+            <a href="{item.url}" class="tray-cart-item__image-link">
+              <img
+                src="{item.image}"
+                alt="{item.name}"
+                class="tray-cart-item__image"
+                width="100"
+                height="100"
+                loading="lazy"
+              >
+            </a>
+            <div class="tray-cart-item__info">
+              <a href="{item.url}" class="tray-cart-item__name">{item.name}</a>
+              {if item.variant}
+              <p class="tray-cart-item__variant">{item.variant}</p>
+              {/if}
+              <p class="tray-cart-item__unit-price">{item.price} cada</p>
+            </div>
+            <div class="tray-cart-item__controls">
+              <div class="tray-qty-control tray-qty-control--sm">
+                <button
+                  class="tray-qty-btn"
+                  type="button"
+                  data-action="dec"
+                  data-item-id="{item.id}"
+                  aria-label="Diminuir quantidade de {item.name}"
+                >−</button>
+                <input
+                  type="number"
+                  class="tray-qty-input tray-qty-input--sm"
+                  value="{item.qty}"
+                  min="1"
+                  data-item-id="{item.id}"
+                  aria-label="Quantidade de {item.name}"
+                >
+                <button
+                  class="tray-qty-btn"
+                  type="button"
+                  data-action="inc"
+                  data-item-id="{item.id}"
+                  aria-label="Aumentar quantidade de {item.name}"
+                >+</button>
+              </div>
+              <p class="tray-cart-item__subtotal">{item.subtotal}</p>
+              <button
+                class="tray-cart-item__remove"
+                type="button"
+                data-item-id="{item.id}"
+                aria-label="Remover {item.name} do carrinho"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+              </button>
+            </div>
+          </div>
+          {/foreach}
+
+          <!-- Cupom de desconto -->
+          <div class="tray-coupon">
+            <p class="tray-coupon__label">Tem um cupom?</p>
+            <div class="tray-coupon__form">
+              <input type="text" id="coupon-input" class="tray-coupon__input tray-form-input" placeholder="Código do cupom" aria-label="Código do cupom">
+              <button type="button" class="tray-btn tray-btn--secondary" id="coupon-apply">aplicar</button>
+            </div>
+            {if coupon_applied}
+            <p class="tray-coupon__success">Cupom "{coupon_code}" aplicado! Desconto: {coupon_discount}</p>
+            {/if}
+          </div>
+        </div>
+
+        <!-- ========== RESUMO DO PEDIDO ========== -->
+        <aside class="tray-cart-summary">
+          <h2 class="tray-cart-summary__title">Resumo do pedido</h2>
+
+          <div class="tray-cart-summary__lines">
+            <div class="tray-summary-line">
+              <span>Subtotal</span>
+              <span>{cart_subtotal}</span>
+            </div>
+            {if cart_discount}
+            <div class="tray-summary-line tray-summary-line--discount">
+              <span>Desconto</span>
+              <span>−{cart_discount}</span>
+            </div>
+            {/if}
+            {if cart_shipping}
+            <div class="tray-summary-line">
+              <span>Frete</span>
+              <span>{cart_shipping}</span>
+            </div>
+            {else}
+            <div class="tray-summary-line tray-summary-line--shipping">
+              <span>Frete</span>
+              <span>calcular no checkout</span>
+            </div>
+            {/if}
+            <div class="tray-summary-line tray-summary-line--total">
+              <span>Total</span>
+              <span>{cart_total}</span>
+            </div>
+            {if cart_installments}
+            <div class="tray-summary-line tray-summary-line--installments">
+              <span></span>
+              <span>{cart_installments}</span>
+            </div>
+            {/if}
+          </div>
+
+          <a href="{checkout_url}" class="tray-btn tray-btn--primary tray-btn--lg tray-cart-checkout-btn">
+            finalizar compra →
+          </a>
+
+          <p class="tray-cart-summary__secure">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Compra 100% segura e protegida
+          </p>
+
+          <!-- Payment badges -->
+          <div class="tray-payment-badges">
+            {payment_methods_icons}
+          </div>
+
+          <!-- Trust: garantia -->
+          <div class="tray-cart-guarantee">
+            <div class="tray-guarantee-item">
+              <span class="tray-guarantee-item__icon">🛡</span>
+              <div>
+                <p class="tray-guarantee-item__title">Garantia SmartBase</p>
+                <p class="tray-guarantee-item__desc">Novos: 1 ano Apple · Seminovos: 3 meses SmartBase</p>
+              </div>
+            </div>
+            <div class="tray-guarantee-item">
+              <span class="tray-guarantee-item__icon">💬</span>
+              <div>
+                <p class="tray-guarantee-item__title">Suporte 24h</p>
+                <p class="tray-guarantee-item__desc">Qualquer dúvida, fale pelo WhatsApp.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Carrinho vazio -->
+      {else}
+
+      <div class="tray-empty-state tray-empty-cart">
+        <p class="tray-empty-state__icon">🛍</p>
+        <h1 class="tray-empty-state__title">Seu carrinho está vazio</h1>
+        <p class="tray-empty-state__desc">
+          Que tal conhecer nossos produtos? Temos iPhones, Macs, iPads e acessórios — novos e seminovos.
+        </p>
+        <a href="{categories_url}" class="tray-btn tray-btn--primary tray-btn--lg">ver produtos</a>
+      </div>
+
+      {/if}
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER SIMPLIFICADO ========== -->
+  <footer class="tray-footer tray-footer--minimal">
+    <div class="tray-container">
+      <div class="tray-footer__bottom">
+        <p class="tray-footer__copy">© {current_year} SmartBase. Todos os direitos reservados.</p>
+        <div class="tray-footer__seals">{store_seals}</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{store_path}/js/theme.js"></script>
+</body>
+</html>

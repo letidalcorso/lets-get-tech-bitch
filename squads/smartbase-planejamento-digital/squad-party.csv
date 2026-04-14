@@ -1,0 +1,6 @@
+id,name,title,icon,execution,path
+diana-digital,Diana Digital,Estrategista de Presença Digital,🧭,inline,./agents/diana-digital.agent.md
+igor-instagram,Igor Instagram,Especialista em Instagram,📸,inline,./agents/igor-instagram.agent.md
+sofia-seo,Sofia SEO,Especialista em SEO e Google,🔍,inline,./agents/sofia-seo.agent.md
+lucas-calendario,Lucas Calendário,Editor de Conteúdo,📅,inline,./agents/lucas-calendario.agent.md
+compilador-final,Compilador Final,Redator Estratégico,📄,inline,./agents/compilador-final.agent.md

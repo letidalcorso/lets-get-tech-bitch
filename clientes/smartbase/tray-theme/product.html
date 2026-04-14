@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{product_name} — SmartBase</title>
+  <meta name="description" content="{product_description_short}">
+  <meta property="og:title" content="{product_name} — SmartBase">
+  <meta property="og:description" content="{product_description_short}">
+  <meta property="og:image" content="{product_image}">
+  <meta property="og:type" content="product">
+  <link rel="stylesheet" href="{tray_css}">
+  <link rel="stylesheet" href="{store_path}/css/theme.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "{product_name}",
+    "image": "{product_image}",
+    "description": "{product_description_short}",
+    "sku": "{product_sku}",
+    "brand": {
+      "@type": "Brand",
+      "name": "Apple"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "{product_url}",
+      "priceCurrency": "BRL",
+      "price": "{product_price_float}",
+      "availability": "{if product_available}https://schema.org/InStock{else}https://schema.org/OutOfStock{/if}",
+      "seller": {
+        "@type": "Organization",
+        "name": "SmartBase"
+      }
+    }
+  }
+  </script>
+</head>
+<body class="tray-page tray-page--product">
+
+  <!-- ========== HEADER ========== -->
+  <header class="tray-header" id="tray-header">
+    <div class="tray-header__inner">
+      <a href="{store_url}" class="tray-header__logo" aria-label="SmartBase">
+        <div class="logo-pill">
+          <span class="logo-pill__dot"></span>
+          <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+        </div>
+      </a>
+      <form class="tray-header__search" action="{search_url}" method="get" role="search">
+        <input type="search" name="busca" class="tray-search-input" placeholder="buscar produto…" aria-label="Buscar produtos" autocomplete="off">
+        <button type="submit" class="tray-search-btn" aria-label="Pesquisar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </form>
+      <nav class="tray-header__nav" aria-label="Categorias">
+        <ul>
+          {foreach items="menu" item="menu_item"}
+          <li><a href="{menu_item.url}" class="tray-nav-link">{menu_item.name}</a></li>
+          {/foreach}
+        </ul>
+      </nav>
+      <div class="tray-header__actions">
+        <a href="{cart_url}" class="tray-cart-btn" aria-label="Carrinho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          {if cart_amount > 0}<span class="tray-cart-badge">{cart_amount}</span>{/if}
+        </a>
+        <button class="tray-hamburger" id="tray-hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="tray-mobile-nav" id="tray-mobile-nav" aria-hidden="true">
+      {foreach items="menu" item="menu_item"}
+      <a href="{menu_item.url}" class="tray-nav-link">{menu_item.name}</a>
+      {/foreach}
+    </div>
+  </header>
+
+  <main class="tray-product-page">
+    <div class="tray-container">
+
+      <!-- Breadcrumb -->
+      <nav class="tray-breadcrumb" aria-label="Você está em">
+        {breadcrumb}
+      </nav>
+
+      <!-- ========== LAYOUT PRODUTO ========== -->
+      <div class="tray-product-layout">
+
+        <!-- Galeria -->
+        <div class="tray-product-gallery">
+          <div class="tray-gallery-main" id="gallery-main">
+            <img
+              src="{product_image}"
+              alt="{product_name}"
+              class="tray-gallery-main__img"
+              id="gallery-main-img"
+              width="600"
+              height="600"
+            >
+            {if product_tag}
+            <span class="tray-product-badge">{product_tag}</span>
+            {/if}
+          </div>
+          <div class="tray-gallery-thumbs" id="gallery-thumbs">
+            {product_images}
+            <button
+              class="tray-thumb"
+              data-src="{product_image_zoom}"
+              aria-label="Ver foto {product_image_index}"
+              type="button"
+            >
+              <img src="{product_image_thumb}" alt="{product_name} foto {product_image_index}" loading="lazy" width="80" height="80">
+            </button>
+            {/product_images}
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="tray-product-info">
+          <p class="tray-product-info__category">{product_category}</p>
+          <h1 class="tray-product-info__name">{product_name}</h1>
+
+          {if product_reference}
+          <p class="tray-product-info__ref">Ref: {product_reference}</p>
+          {/if}
+
+          <!-- Disponibilidade -->
+          <div class="tray-product-info__availability">
+            {if product_available}
+            <span class="tray-availability tray-availability--in">Em estoque</span>
+            {else}
+            <span class="tray-availability tray-availability--out">Indisponível</span>
+            {/if}
+          </div>
+
+          <!-- Preço -->
+          <div class="tray-product-info__pricing">
+            {if product_price_compare}
+            <p class="tray-product-info__price-from">{product_price_compare}</p>
+            {/if}
+            <p class="tray-product-info__price">{product_price}</p>
+            {if installments}
+            <p class="tray-product-info__installments">{installments}</p>
+            {/if}
+            {if product_price_pix}
+            <p class="tray-product-info__pix">ou {product_price_pix} no Pix</p>
+            {/if}
+          </div>
+
+          <!-- Variações (cor, capacidade) -->
+          {if product_variants}
+          <div class="tray-product-variants">
+            {product_variants}
+          </div>
+          {/if}
+
+          <!-- Quantidade + Comprar -->
+          <div class="tray-product-info__buy-row">
+            <div class="tray-qty-control">
+              <button class="tray-qty-btn" id="qty-dec" type="button" aria-label="Diminuir quantidade">−</button>
+              <input type="number" id="qty-input" class="tray-qty-input" value="1" min="1" max="{product_stock}" aria-label="Quantidade">
+              <button class="tray-qty-btn" id="qty-inc" type="button" aria-label="Aumentar quantidade">+</button>
+            </div>
+            <div class="tray-product-info__buy-btn">
+              {buy_button}
+            </div>
+          </div>
+
+          <!-- Frete -->
+          <div class="tray-shipping-calc">
+            <p class="tray-shipping-calc__label">Calcular frete</p>
+            {freight_simulation}
+          </div>
+
+          <!-- Garantias -->
+          <div class="tray-product-guarantees">
+            <div class="tray-guarantee-item">
+              <span class="tray-guarantee-item__icon">🛡</span>
+              <div>
+                <p class="tray-guarantee-item__title">Garantia inclusa</p>
+                <p class="tray-guarantee-item__desc">
+                  {if product_tag == 'seminovo'}3 meses SmartBase{else}1 ano Apple{/if}
+                </p>
+              </div>
+            </div>
+            <div class="tray-guarantee-item">
+              <span class="tray-guarantee-item__icon">📦</span>
+              <div>
+                <p class="tray-guarantee-item__title">Original verificado</p>
+                <p class="tray-guarantee-item__desc">100% original Apple, checklist completo</p>
+              </div>
+            </div>
+            <div class="tray-guarantee-item">
+              <span class="tray-guarantee-item__icon">⚡</span>
+              <div>
+                <p class="tray-guarantee-item__title">Setup incluído</p>
+                <p class="tray-guarantee-item__desc">Configuramos e migramos seus dados</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp CTA secundário -->
+          <a
+            href="https://wa.me/5554XXXXXXXX?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20{product_name}."
+            class="tray-btn tray-btn--secondary"
+            style="width:100%;justify-content:center;margin-top:var(--tray-space-4);"
+            target="_blank"
+            rel="noopener"
+          >
+            💬 tirar dúvidas no WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <!-- ========== ABAS: DESCRIÇÃO / ESPECIFICAÇÕES ========== -->
+      <div class="tray-product-tabs">
+        <div class="tray-tabs-nav" role="tablist">
+          <button class="tray-tab-btn is-active" role="tab" id="tab-desc" aria-controls="panel-desc" aria-selected="true" type="button">Descrição</button>
+          <button class="tray-tab-btn" role="tab" id="tab-specs" aria-controls="panel-specs" aria-selected="false" type="button">Especificações</button>
+          {if product_reviews}
+          <button class="tray-tab-btn" role="tab" id="tab-reviews" aria-controls="panel-reviews" aria-selected="false" type="button">Avaliações</button>
+          {/if}
+        </div>
+
+        <div class="tray-tab-panel is-active" role="tabpanel" id="panel-desc" aria-labelledby="tab-desc">
+          <div class="tray-product-description">
+            {product_description}
+          </div>
+        </div>
+
+        <div class="tray-tab-panel" role="tabpanel" id="panel-specs" aria-labelledby="tab-specs" hidden>
+          <div class="tray-product-specs">
+            {product_attributes}
+          </div>
+        </div>
+
+        {if product_reviews}
+        <div class="tray-tab-panel" role="tabpanel" id="panel-reviews" aria-labelledby="tab-reviews" hidden>
+          {product_reviews}
+        </div>
+        {/if}
+      </div>
+
+      <!-- ========== PRODUTOS RELACIONADOS ========== -->
+      {if related_products}
+      <section class="tray-section tray-section--related">
+        <div class="tray-section-head">
+          <div>
+            <p class="tray-section-label">você também pode gostar</p>
+            <h2 class="tray-section-title">produtos relacionados.</h2>
+          </div>
+        </div>
+        <div class="tray-product-grid">
+          {related_products limit="4"}
+          <article class="tray-product-card">
+            <a href="{product_url}" class="tray-product-card__image-link">
+              <div class="tray-product-card__image-wrap">
+                <img src="{product_image}" alt="{product_name}" class="tray-product-card__image" loading="lazy" width="400" height="400">
+                {if product_tag}<span class="tray-product-card__badge">{product_tag}</span>{/if}
+              </div>
+            </a>
+            <div class="tray-product-card__body">
+              <p class="tray-product-card__category">{product_category}</p>
+              <h3 class="tray-product-card__name"><a href="{product_url}">{product_name}</a></h3>
+              <div class="tray-product-card__pricing">
+                {if product_price_compare}<p class="tray-product-card__price-from">{product_price_compare}</p>{/if}
+                <p class="tray-product-card__price">{product_price}</p>
+                {if installments}<p class="tray-product-card__installments">{installments}</p>{/if}
+              </div>
+              <div class="tray-product-card__actions">{buy_button}</div>
+            </div>
+          </article>
+          {/related_products}
+        </div>
+      </section>
+      {/if}
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="tray-footer">
+    <div class="tray-container">
+      <div class="tray-footer__grid">
+        <div class="tray-footer__brand">
+          <div class="logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+          <p class="tray-footer__tagline">Apple a sério. Caxias do Sul e região, RS.</p>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Produtos</p>
+          <ul class="tray-footer__links">
+            {foreach items="categories" item="cat"}
+            <li><a href="{cat.url}" class="tray-footer__link">{cat.name}</a></li>
+            {/foreach}
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Loja</p>
+          <ul class="tray-footer__links">
+            <li><a href="{store_url}/sobre" class="tray-footer__link">Sobre nós</a></li>
+            <li><a href="{store_url}#troca" class="tray-footer__link">Troca</a></li>
+            <li><a href="{store_url}/contato" class="tray-footer__link">Contato</a></li>
+            <li><a href="{store_url}/pagina/politica-de-trocas-e-devolucoes" class="tray-footer__link">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Contato</p>
+          <ul class="tray-footer__links">
+            <li><span class="tray-footer__link">📍 Caxias do Sul, RS</span></li>
+            <li><a href="https://wa.me/5554XXXXXXXX" class="tray-footer__link">💬 WhatsApp</a></li>
+            <li><a href="https://instagram.com/smartbase" class="tray-footer__link">📸 @smartbase</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tray-footer__bottom">
+        <p class="tray-footer__copy">© {current_year} SmartBase. Todos os direitos reservados.</p>
+        <div class="tray-footer__seals">{store_seals}</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5554XXXXXXXX" class="tray-whatsapp-fab" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="{store_path}/js/theme.js"></script>
+</body>
+</html>

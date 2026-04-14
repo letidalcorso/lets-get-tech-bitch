@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": "iphone-15-pro-256-black",
+      "name": "iPhone 15 Pro 256GB",
+      "category": "iPhone",
+      "condition": "novo",
+      "price": 7499.00,
+      "installments": 12,
+      "description": "Titânio. Câmera Pro. Chip A17 Pro. O iPhone mais avançado da Apple.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "iphone-14-128-midnight",
+      "name": "iPhone 14 128GB Meia-noite",
+      "category": "iPhone",
+      "condition": "seminovo",
+      "price": 3799.00,
+      "installments": 12,
+      "description": "Seminovo certificado. Chip A15 Bionic, câmera dupla 12MP. Em perfeito estado.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "iphone-13-128-blue",
+      "name": "iPhone 13 128GB Azul",
+      "category": "iPhone",
+      "condition": "seminovo",
+      "price": 2899.00,
+      "installments": 10,
+      "description": "Seminovo com garantia SmartBase. Chip A15, bateria excelente, tela Super Retina XDR.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "macbook-air-m2-256",
+      "name": "MacBook Air M2 256GB",
+      "category": "Mac",
+      "condition": "novo",
+      "price": 9999.00,
+      "installments": 12,
+      "description": "O MacBook mais fino de todos os tempos. Chip M2, tela Liquid Retina 13,6\".",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "macbook-pro-m1-512",
+      "name": "MacBook Pro 14\" M1 Pro 512GB",
+      "category": "Mac",
+      "condition": "seminovo",
+      "price": 8499.00,
+      "installments": 12,
+      "description": "Seminovo em excelente estado. Chip M1 Pro, tela Liquid Retina XDR, bateria nova.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "ipad-10th-64",
+      "name": "iPad 10ª Geração 64GB",
+      "category": "iPad",
+      "condition": "novo",
+      "price": 3999.00,
+      "installments": 12,
+      "description": "O iPad mais acessível da Apple. Tela Liquid Retina 10,9\", chip A14 Bionic.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "airpods-pro-2",
+      "name": "AirPods Pro (2ª geração)",
+      "category": "Acessórios",
+      "condition": "novo",
+      "price": 1799.00,
+      "installments": 6,
+      "description": "Cancelamento ativo de ruído. Áudio Adaptável. Resistência à água IPX4.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "apple-watch-series-9",
+      "name": "Apple Watch Series 9 GPS 41mm",
+      "category": "Acessórios",
+      "condition": "novo",
+      "price": 3299.00,
+      "installments": 12,
+      "description": "Chip S9. Tela sempre ativa. Monitoramento de saúde avançado.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    },
+    {
+      "id": "iphone-12-64-white",
+      "name": "iPhone 12 64GB Branco",
+      "category": "iPhone",
+      "condition": "seminovo",
+      "price": 1999.00,
+      "installments": 10,
+      "description": "Melhor custo-benefício. OLED 6,1\", chip A14, câmera dual 12MP. Garantia SmartBase.",
+      "image": "",
+      "trayUrl": "https://www.smartbase.com.br"
+    }
+  ]
+}

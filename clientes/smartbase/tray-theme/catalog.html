@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{category_name} — SmartBase</title>
+  <meta name="description" content="{category_description}">
+  <link rel="stylesheet" href="{tray_css}">
+  <link rel="stylesheet" href="{store_path}/css/theme.css">
+</head>
+<body class="tray-page tray-page--catalog">
+
+  <!-- ========== HEADER ========== -->
+  <header class="tray-header" id="tray-header">
+    <div class="tray-header__inner">
+      <a href="{store_url}" class="tray-header__logo" aria-label="SmartBase">
+        <div class="logo-pill">
+          <span class="logo-pill__dot"></span>
+          <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+        </div>
+      </a>
+      <form class="tray-header__search" action="{search_url}" method="get" role="search">
+        <input type="search" name="busca" class="tray-search-input" placeholder="buscar produto…" aria-label="Buscar produtos" autocomplete="off">
+        <button type="submit" class="tray-search-btn" aria-label="Pesquisar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </form>
+      <nav class="tray-header__nav" aria-label="Categorias">
+        <ul>
+          {foreach items="menu" item="menu_item"}
+          <li><a href="{menu_item.url}" class="tray-nav-link {if menu_item.active}is-active{/if}">{menu_item.name}</a></li>
+          {/foreach}
+        </ul>
+      </nav>
+      <div class="tray-header__actions">
+        <a href="{cart_url}" class="tray-cart-btn" aria-label="Carrinho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          {if cart_amount > 0}<span class="tray-cart-badge">{cart_amount}</span>{/if}
+        </a>
+        <button class="tray-hamburger" id="tray-hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="tray-mobile-nav" id="tray-mobile-nav" aria-hidden="true">
+      {foreach items="menu" item="menu_item"}
+      <a href="{menu_item.url}" class="tray-nav-link">{menu_item.name}</a>
+      {/foreach}
+    </div>
+  </header>
+
+  <main class="tray-catalog-page">
+    <div class="tray-container">
+
+      <!-- Breadcrumb -->
+      <nav class="tray-breadcrumb" aria-label="Você está em">
+        {breadcrumb}
+      </nav>
+
+      <div class="tray-catalog-layout">
+
+        <!-- ========== SIDEBAR FILTROS ========== -->
+        <aside class="tray-catalog-sidebar" id="catalog-sidebar">
+          <div class="tray-sidebar-widget">
+            <p class="tray-sidebar-title">Categorias</p>
+            <ul class="tray-cat-list">
+              {foreach items="categories" item="cat"}
+              <li>
+                <a href="{cat.url}" class="tray-cat-link {if cat.active}is-active{/if}">
+                  {cat.name}
+                  <span class="tray-cat-count">{cat.products_count}</span>
+                </a>
+              </li>
+              {/foreach}
+            </ul>
+          </div>
+
+          <div class="tray-sidebar-widget">
+            <p class="tray-sidebar-title">Condição</p>
+            <ul class="tray-filter-list" id="filter-condition">
+              <li>
+                <label class="tray-filter-label">
+                  <input type="checkbox" name="condition" value="novo" class="tray-filter-checkbox">
+                  Novo
+                </label>
+              </li>
+              <li>
+                <label class="tray-filter-label">
+                  <input type="checkbox" name="condition" value="seminovo" class="tray-filter-checkbox">
+                  Seminovo
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tray-sidebar-widget">
+            <p class="tray-sidebar-title">Faixa de preço</p>
+            <div class="tray-price-range">
+              {price_filter}
+            </div>
+          </div>
+
+          <!-- Trade-in CTA na sidebar -->
+          <div class="tray-sidebar-widget tray-sidebar-widget--cta">
+            <p class="tray-sidebar-cta-label">tem um Apple pra trocar?</p>
+            <p class="tray-sidebar-cta-desc">Avaliação gratuita, crédito direto na compra.</p>
+            <a href="https://wa.me/5554XXXXXXXX?text=Oi!%20Quero%20avaliar%20meu%20aparelho%20para%20troca." class="tray-btn tray-btn--primary" target="_blank" rel="noopener" style="width:100%;justify-content:center;">avaliar agora →</a>
+          </div>
+        </aside>
+
+        <!-- ========== LISTAGEM ========== -->
+        <div class="tray-catalog-main">
+
+          <!-- Toolbar -->
+          <div class="tray-catalog-toolbar">
+            <p class="tray-catalog-count">
+              <strong>{products_count}</strong> produto{if products_count != 1}s{/if} encontrado{if products_count != 1}s{/if}
+            </p>
+            <div class="tray-catalog-sort">
+              <label for="sort-select" class="tray-sort-label">Ordenar por:</label>
+              <select id="sort-select" class="tray-sort-select" onchange="window.location.href=this.value">
+                <option value="{sort_url_relevance}" {if sort == 'relevance'}selected{/if}>Relevância</option>
+                <option value="{sort_url_sales}" {if sort == 'sales'}selected{/if}>Mais vendidos</option>
+                <option value="{sort_url_price_asc}" {if sort == 'price_asc'}selected{/if}>Menor preço</option>
+                <option value="{sort_url_price_desc}" {if sort == 'price_desc'}selected{/if}>Maior preço</option>
+                <option value="{sort_url_newest}" {if sort == 'newest'}selected{/if}>Mais recentes</option>
+              </select>
+            </div>
+            <!-- Mobile: toggle sidebar -->
+            <button class="tray-btn tray-btn--ghost tray-filter-toggle" id="filter-toggle" aria-controls="catalog-sidebar">
+              filtros
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
+            </button>
+          </div>
+
+          <!-- Produtos grid -->
+          <div class="tray-product-grid" id="catalog-grid">
+            {products}
+            <article class="tray-product-card">
+              <a href="{product_url}" class="tray-product-card__image-link">
+                <div class="tray-product-card__image-wrap">
+                  <img
+                    src="{product_image}"
+                    alt="{product_name}"
+                    class="tray-product-card__image"
+                    loading="lazy"
+                    width="400"
+                    height="400"
+                  >
+                  {if product_tag}
+                  <span class="tray-product-card__badge">{product_tag}</span>
+                  {/if}
+                  {if product_available == false}
+                  <span class="tray-product-card__badge tray-product-card__badge--out">indisponível</span>
+                  {/if}
+                </div>
+              </a>
+              <div class="tray-product-card__body">
+                <p class="tray-product-card__category">{product_category}</p>
+                <h3 class="tray-product-card__name">
+                  <a href="{product_url}">{product_name}</a>
+                </h3>
+                <div class="tray-product-card__pricing">
+                  {if product_price_compare}
+                  <p class="tray-product-card__price-from">{product_price_compare}</p>
+                  {/if}
+                  <p class="tray-product-card__price">{product_price}</p>
+                  {if installments}
+                  <p class="tray-product-card__installments">{installments}</p>
+                  {/if}
+                </div>
+                <div class="tray-product-card__actions">
+                  {buy_button}
+                </div>
+              </div>
+            </article>
+            {/products}
+          </div>
+
+          <!-- Sem resultados -->
+          {if products_count == 0}
+          <div class="tray-empty-state">
+            <p class="tray-empty-state__icon">🔍</p>
+            <h2 class="tray-empty-state__title">Nenhum produto encontrado</h2>
+            <p class="tray-empty-state__desc">Tente remover os filtros ou buscar por outro termo.</p>
+            <a href="{categories_url}" class="tray-btn tray-btn--primary">ver todos os produtos</a>
+          </div>
+          {/if}
+
+          <!-- Paginação -->
+          <nav class="tray-pagination" aria-label="Páginas de produtos">
+            {pagination}
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="tray-footer">
+    <div class="tray-container">
+      <div class="tray-footer__grid">
+        <div class="tray-footer__brand">
+          <div class="logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+          <p class="tray-footer__tagline">Apple a sério. Caxias do Sul e região, RS.</p>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Produtos</p>
+          <ul class="tray-footer__links">
+            {foreach items="categories" item="cat"}
+            <li><a href="{cat.url}" class="tray-footer__link">{cat.name}</a></li>
+            {/foreach}
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Loja</p>
+          <ul class="tray-footer__links">
+            <li><a href="{store_url}/sobre" class="tray-footer__link">Sobre nós</a></li>
+            <li><a href="{store_url}#troca" class="tray-footer__link">Troca</a></li>
+            <li><a href="{store_url}/contato" class="tray-footer__link">Contato</a></li>
+            <li><a href="{store_url}/pagina/politica-de-trocas-e-devolucoes" class="tray-footer__link">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Contato</p>
+          <ul class="tray-footer__links">
+            <li><span class="tray-footer__link">📍 Caxias do Sul, RS</span></li>
+            <li><a href="https://wa.me/5554XXXXXXXX" class="tray-footer__link">💬 WhatsApp</a></li>
+            <li><a href="https://instagram.com/smartbase" class="tray-footer__link">📸 @smartbase</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tray-footer__bottom">
+        <p class="tray-footer__copy">© {current_year} SmartBase. Todos os direitos reservados.</p>
+        <div class="tray-footer__seals">{store_seals}</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5554XXXXXXXX" class="tray-whatsapp-fab" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="{store_path}/js/theme.js"></script>
+</body>
+</html>
