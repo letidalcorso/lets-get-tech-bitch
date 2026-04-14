@@ -1,0 +1,53 @@
+name: smartbase-planejamento-digital
+description: >
+  Squad de planejamento estratégico de presença digital para a SmartBase.
+  Produz o plano completo de 90 dias cobrindo Instagram e SEO/Google,
+  com diagnóstico de posicionamento, estratégia por canal, calendário editorial
+  integrado e KPIs. Entrega um documento consolidado pronto para execução.
+version: "1.0.0"
+created: "2026-04-12"
+client: smartbase
+mode: alta-performance
+
+briefing:
+  path: clientes/smartbase/briefing.md
+
+agents:
+  - id: diana-digital
+    path: ./agents/diana-digital.agent.md
+  - id: igor-instagram
+    path: ./agents/igor-instagram.agent.md
+  - id: sofia-seo
+    path: ./agents/sofia-seo.agent.md
+  - id: lucas-calendario
+    path: ./agents/lucas-calendario.agent.md
+  - id: compilador-final
+    path: ./agents/compilador-final.agent.md
+
+skills:
+  - web_search
+  - web_fetch
+
+pipeline:
+  entry: pipeline/pipeline.yaml
+  steps:
+    - step: pipeline/steps/step-01-discovery.md
+      type: checkpoint
+    - step: pipeline/steps/step-02-diana-digital.md
+      agent: diana-digital
+      execution: inline
+    - step: pipeline/steps/step-03-igor-instagram.md
+      agent: igor-instagram
+      execution: inline
+    - step: pipeline/steps/step-04-sofia-seo.md
+      agent: sofia-seo
+      execution: inline
+    - step: pipeline/steps/step-05-lucas-calendario.md
+      agent: lucas-calendario
+      execution: inline
+    - step: pipeline/steps/step-06-aprovacao.md
+      type: checkpoint
+    - step: pipeline/steps/step-07-compilador.md
+      agent: compilador-final
+      execution: inline
+      optional: true
