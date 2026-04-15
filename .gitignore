@@ -30,3 +30,4 @@ dist/
 build/
 *.tsbuildinfo
 skills/opensquad-skill-creator/eval-viewer/viewer 2.html
+.playwright-mcp/
