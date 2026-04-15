@@ -34,7 +34,7 @@
   <text x="72" y="584" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="88" font-weight="800" fill="#3E82F7">de verdade</text>
   <text x="72" y="682" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="88" font-weight="800" fill="#F2F2F6">no iphone 15</text>
+        font-size="78" font-weight="800" fill="#F2F2F6">no iphone 17 pro max</text>
 
   <rect x="72" y="718" width="400" height="3" fill="url(#brand)" rx="2"/>
 
@@ -48,10 +48,10 @@
   <rect x="72" y="920" width="936" height="220" rx="16" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="1"/>
 
   <circle cx="128" cy="984" r="6" fill="#3E82F7"/>
-  <text x="158" y="992" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">usb-c: finalmente universal</text>
+  <text x="158" y="992" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">câmera com zoom 5x em todos os modelos</text>
 
   <circle cx="128" cy="1049" r="6" fill="#3E82F7"/>
-  <text x="158" y="1057" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">dynamic island em todos os modelos</text>
+  <text x="158" y="1057" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">chip a19 pro: o mais rápido do mundo</text>
 
   <circle cx="128" cy="1114" r="6" fill="#6DAFF9"/>
   <text x="158" y="1122" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">vale a troca? a resposta real</text>
