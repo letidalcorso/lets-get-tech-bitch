@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07070E"/>
+      <stop offset="100%" stop-color="#0F0F1C"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E82F7"/>
+      <stop offset="100%" stop-color="#6DAFF9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="3" fill="url(#brand)"/>
+
+  <!-- Logo pill -->
+  <rect x="72" y="54" width="210" height="40" rx="20" fill="#0F0F1C"/>
+  <circle cx="95" cy="74" r="10" fill="#3E82F7"/>
+  <text x="168" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" text-anchor="middle" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1008" y="80" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" fill="#7A7A96">16.04.2026</text>
+  <line x1="72" y1="110" x2="1008" y2="110" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Headline -->
+  <text x="72" y="238" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">como funciona</text>
+  <text x="72" y="326" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">a avaliação</text>
+  <rect x="72" y="352" width="380" height="3" rx="2" fill="url(#brand)"/>
+
+  <!-- Supporting text -->
+  <text x="72" y="428" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="34" fill="#C0C0D0">em 10 minutos avaliamos seu aparelho</text>
+  <text x="72" y="476" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="34" fill="#C0C0D0">na nossa loja, sem custo. o valor é</text>
+  <text x="72" y="524" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="34" fill="#C0C0D0">apresentado na hora — sem surpresa.</text>
+
+  <!-- Step cards -->
+  <rect x="72" y="592" width="936" height="108" rx="16" fill="#0F0F1C"/>
+  <rect x="72" y="592" width="6" height="108" rx="3" fill="#3E82F7"/>
+  <text x="110" y="642" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">passo 1</text>
+  <text x="110" y="682" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#C0C0D0">você traz o aparelho para a smartbase</text>
+
+  <rect x="72" y="718" width="936" height="108" rx="16" fill="#0F0F1C"/>
+  <rect x="72" y="718" width="6" height="108" rx="3" fill="#3E82F7"/>
+  <text x="110" y="768" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">passo 2</text>
+  <text x="110" y="808" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#C0C0D0">avaliamos tela, bateria, câmera e carcaça</text>
+
+  <rect x="72" y="844" width="936" height="108" rx="16" fill="#0F0F1C"/>
+  <rect x="72" y="844" width="6" height="108" rx="3" fill="#6DAFF9"/>
+  <text x="110" y="894" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">passo 3</text>
+  <text x="110" y="934" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#C0C0D0">apresentamos o valor: desconto na compra</text>
+
+  <rect x="72" y="970" width="936" height="108" rx="16" fill="#0F0F1C"/>
+  <rect x="72" y="970" width="6" height="108" rx="3" fill="#6DAFF9"/>
+  <text x="110" y="1020" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">passo 4</text>
+  <text x="110" y="1060" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#C0C0D0">você sai com o produto novo na mão</text>
+
+  <!-- Highlight stat -->
+  <rect x="72" y="1118" width="936" height="100" rx="16" fill="#3E82F7"/>
+  <text x="540" y="1163" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="700"
+        fill="#F2F2F6" text-anchor="middle">tempo médio de avaliação: 10 minutos</text>
+  <text x="540" y="1200" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26"
+        fill="rgba(242,242,246,0.8)" text-anchor="middle">sem agendamento. chega e a gente resolve.</text>
+
+  <!-- Footer -->
+  <line x1="72" y1="1272" x2="1008" y2="1272" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="72" y="1312" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">@smartbase.cxs</text>
+  <text x="1008" y="1312" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">2 / 6</text>
+</svg>

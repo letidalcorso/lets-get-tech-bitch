@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07070E"/>
+      <stop offset="100%" stop-color="#100820"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#AF52DE"/>
+      <stop offset="100%" stop-color="#5856D6"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E82F7"/>
+      <stop offset="100%" stop-color="#6DAFF9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="3" fill="url(#purple)"/>
+
+  <!-- Decorative glow -->
+  <circle cx="900" cy="300" r="200" fill="rgba(175,82,222,0.06)"/>
+
+  <!-- Logo pill -->
+  <rect x="72" y="54" width="210" height="40" rx="20" fill="rgba(15,8,32,0.8)"/>
+  <circle cx="95" cy="74" r="10" fill="#AF52DE"/>
+  <text x="168" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" text-anchor="middle" fill="rgba(242,242,246,0.85)"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1008" y="80" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" fill="rgba(242,242,246,0.3)">17.04.2026</text>
+  <line x1="72" y1="110" x2="1008" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Number badge -->
+  <circle cx="130" cy="232" r="56" fill="url(#purple)"/>
+  <text x="130" y="250" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="54" font-weight="900"
+        fill="#F2F2F6" text-anchor="middle">4</text>
+
+  <!-- Headline -->
+  <text x="72" y="370" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="80" font-weight="800" fill="#F2F2F6">modo foco</text>
+  <rect x="72" y="396" width="340" height="3" rx="2" fill="url(#purple)"/>
+  <text x="72" y="468" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="rgba(242,242,246,0.65)">silencia o que não importa agora.</text>
+
+  <!-- Focus mode cards -->
+  <rect x="72" y="524" width="440" height="196" rx="20" fill="rgba(242,242,246,0.06)"/>
+  <text x="130" y="592" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44">🏢</text>
+  <text x="130" y="646" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2F2F6">trabalho</text>
+  <text x="130" y="690" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="rgba(242,242,246,0.5)">só apps e contatos essenciais</text>
+
+  <rect x="568" y="524" width="440" height="196" rx="20" fill="rgba(242,242,246,0.06)"/>
+  <text x="626" y="592" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44">😴</text>
+  <text x="626" y="646" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2F2F6">sono</text>
+  <text x="626" y="690" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="rgba(242,242,246,0.5)">silencia tudo até o alarme</text>
+
+  <rect x="72" y="740" width="440" height="196" rx="20" fill="rgba(175,82,222,0.18)"/>
+  <text x="130" y="808" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44">📚</text>
+  <text x="130" y="862" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2F2F6">estudos</text>
+  <text x="130" y="906" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="rgba(242,242,246,0.5)">modo sem distração</text>
+
+  <rect x="568" y="740" width="440" height="196" rx="20" fill="rgba(242,242,246,0.06)"/>
+  <text x="626" y="808" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44">⚙️</text>
+  <text x="626" y="862" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2F2F6">personalizado</text>
+  <text x="626" y="906" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="rgba(242,242,246,0.5)">você define as regras</text>
+
+  <!-- Instruction -->
+  <text x="72" y="1006" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="rgba(242,242,246,0.65)">configure em:</text>
+  <text x="72" y="1054" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" font-weight="600" fill="#F2F2F6">ajustes → foco</text>
+  <text x="72" y="1122" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="rgba(242,242,246,0.5)">você pode ativar por horário automático</text>
+  <text x="72" y="1170" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="rgba(242,242,246,0.5)">ou na central de controle.</text>
+
+  <!-- Footer -->
+  <line x1="72" y1="1262" x2="1008" y2="1262" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="72" y="1308" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="rgba(242,242,246,0.2)">@smartbase.cxs</text>
+  <text x="1008" y="1308" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="26" fill="rgba(242,242,246,0.2)">5 / 7</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07070E"/>
+      <stop offset="60%" stop-color="#0A0A16"/>
+      <stop offset="100%" stop-color="#07070E"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E82F7"/>
+      <stop offset="100%" stop-color="#6DAFF9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="3" fill="url(#brand)"/>
+
+  <!-- Logo pill -->
+  <rect x="72" y="54" width="210" height="40" rx="20" fill="#0F0F1C"/>
+  <circle cx="95" cy="74" r="10" fill="#3E82F7"/>
+  <text x="168" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" text-anchor="middle" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1008" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#7A7A96" text-anchor="end">19.04.2026</text>
+  <line x1="72" y1="110" x2="1008" y2="110" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- REEL badge -->
+  <rect x="72" y="148" width="148" height="46" rx="23" fill="#FF2D55"/>
+  <text x="146" y="178" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="700"
+        fill="#F2F2F6" text-anchor="middle">▶ reel</text>
+
+  <!-- Main headline -->
+  <text x="72" y="388" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="800" fill="#F2F2F6">o que</text>
+  <text x="72" y="486" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="800" fill="#F2F2F6">mudou</text>
+  <text x="72" y="584" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="800" fill="#3E82F7">de verdade</text>
+  <text x="72" y="682" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="800" fill="#F2F2F6">no iphone 15</text>
+
+  <rect x="72" y="718" width="400" height="3" fill="url(#brand)" rx="2"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="796" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="36" font-weight="300" fill="#C0C0D0">sem hype. só o que importa.</text>
+  <text x="72" y="844" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="36" font-weight="300" fill="#C0C0D0">por quem vende apple todo dia.</text>
+
+  <!-- Feature bullets -->
+  <rect x="72" y="920" width="936" height="220" rx="16" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="1"/>
+
+  <circle cx="128" cy="984" r="6" fill="#3E82F7"/>
+  <text x="158" y="992" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">usb-c: finalmente universal</text>
+
+  <circle cx="128" cy="1049" r="6" fill="#3E82F7"/>
+  <text x="158" y="1057" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">dynamic island em todos os modelos</text>
+
+  <circle cx="128" cy="1114" r="6" fill="#6DAFF9"/>
+  <text x="158" y="1122" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#E0E0F0">vale a troca? a resposta real</text>
+
+  <!-- CTA -->
+  <rect x="72" y="1194" width="936" height="90" rx="45" fill="#3E82F7"/>
+  <text x="540" y="1249" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="700" fill="#F2F2F6" text-anchor="middle">quer fazer trade-in? manda dm →</text>
+
+  <!-- Footer -->
+  <text x="72" y="1322" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">@smartbase.cxs</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07070E"/>
+      <stop offset="100%" stop-color="#0F0F1C"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E82F7"/>
+      <stop offset="100%" stop-color="#6DAFF9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="3" fill="url(#brand)"/>
+
+  <!-- Logo pill -->
+  <rect x="72" y="54" width="210" height="40" rx="20" fill="#0F0F1C"/>
+  <circle cx="95" cy="74" r="10" fill="#3E82F7"/>
+  <text x="168" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" text-anchor="middle" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1008" y="80" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" fill="#7A7A96">17.04.2026</text>
+  <line x1="72" y1="110" x2="1008" y2="110" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Number badge -->
+  <circle cx="130" cy="232" r="56" fill="url(#brand)"/>
+  <text x="130" y="250" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="54" font-weight="900"
+        fill="#F2F2F6" text-anchor="middle">3</text>
+
+  <!-- Headline -->
+  <text x="72" y="360" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">back tap:</text>
+  <text x="72" y="448" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">bata nas</text>
+  <text x="72" y="536" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">costas do</text>
+  <text x="72" y="624" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">iphone</text>
+  <rect x="72" y="650" width="320" height="3" rx="2" fill="url(#brand)"/>
+
+  <!-- Phone back illustration -->
+  <rect x="760" y="148" width="248" height="516" rx="36" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="2"/>
+  <rect x="790" y="178" width="188" height="378" rx="20" fill="#121220"/>
+  <!-- Camera dot -->
+  <circle cx="884" cy="368" r="28" fill="#1A1A2E"/>
+  <circle cx="884" cy="368" r="12" fill="#3E82F7" opacity="0.5"/>
+  <!-- Tap indicator rings -->
+  <circle cx="884" cy="368" r="48" fill="none" stroke="#3E82F7" stroke-width="2.5" opacity="0.55"/>
+  <circle cx="884" cy="368" r="68" fill="none" stroke="#3E82F7" stroke-width="1.5" opacity="0.28"/>
+  <text x="884" y="558" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20"
+        fill="#3E82F7" text-anchor="middle" font-weight="600">tap tap</text>
+
+  <!-- Instructions -->
+  <text x="72" y="720" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#C0C0D0">toque duas vezes nas costas</text>
+  <text x="72" y="768" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#C0C0D0">para executar uma ação.</text>
+
+  <!-- How to activate -->
+  <rect x="72" y="826" width="936" height="128" rx="16" fill="#0F0F1C"/>
+  <text x="110" y="878" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">como ativar:</text>
+  <text x="110" y="924" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#C0C0D0">ajustes → acessibilidade → toque → back tap</text>
+
+  <!-- Use cases -->
+  <text x="72" y="1020" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#7A7A96">usos mais comuns:</text>
+  <text x="72" y="1068" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#C0C0D0">· tirar screenshot sem segurar botões</text>
+  <text x="72" y="1116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#C0C0D0">· abrir central de controle</text>
+  <text x="72" y="1164" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#C0C0D0">· rolar a página para o topo</text>
+  <text x="72" y="1212" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#3E82F7">· qualquer atalho que você quiser</text>
+
+  <!-- Footer -->
+  <line x1="72" y1="1272" x2="1008" y2="1272" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="72" y="1316" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">@smartbase.cxs</text>
+  <text x="1008" y="1316" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">4 / 7</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07070E"/>
+      <stop offset="100%" stop-color="#0F0F1C"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E82F7"/>
+      <stop offset="100%" stop-color="#6DAFF9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="3" fill="url(#brand)"/>
+
+  <!-- Logo pill -->
+  <rect x="72" y="54" width="210" height="40" rx="20" fill="#0F0F1C"/>
+  <circle cx="95" cy="74" r="10" fill="#3E82F7"/>
+  <text x="168" y="80" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" text-anchor="middle" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1008" y="80" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" fill="#7A7A96">16.04.2026</text>
+  <line x1="72" y1="110" x2="1008" y2="110" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Headline -->
+  <text x="72" y="238" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">aceitamos</text>
+  <text x="72" y="326" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#F2F2F6">esses modelos</text>
+  <rect x="72" y="352" width="480" height="3" rx="2" fill="url(#brand)"/>
+  <text x="72" y="408" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#7A7A96">em bom ou razoável estado de conservação</text>
+
+  <!-- Model list rows -->
+  <rect x="72" y="452" width="936" height="54" rx="12" fill="#0F0F1C"/>
+  <text x="110" y="487" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#3E82F7">iphone</text>
+  <text x="222" y="487" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#C0C0D0">11 · 12 · 13 · 14 · 15 (todos os modelos)</text>
+
+  <rect x="72" y="520" width="936" height="54" rx="12" fill="#0F0F1C"/>
+  <text x="110" y="555" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#3E82F7">macbook</text>
+  <text x="248" y="555" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#C0C0D0">air · pro — intel e apple silicon (m1, m2, m3)</text>
+
+  <rect x="72" y="588" width="936" height="54" rx="12" fill="#0F0F1C"/>
+  <text x="110" y="623" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#3E82F7">ipad</text>
+  <text x="188" y="623" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#C0C0D0">air · pro · mini · 9ª gen em diante</text>
+
+  <rect x="72" y="656" width="936" height="54" rx="12" fill="#0F0F1C"/>
+  <text x="110" y="691" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#3E82F7">apple watch</text>
+  <text x="308" y="691" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#C0C0D0">series 6 em diante</text>
+
+  <!-- What we don't accept -->
+  <rect x="72" y="752" width="936" height="180" rx="16" fill="#1A0810" stroke="#3A1020" stroke-width="1"/>
+  <text x="110" y="802" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#FF453A">✕ não aceitamos</text>
+  <text x="110" y="850" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#C0C0D0">aparelhos com icloud ativo do proprietário anterior</text>
+  <text x="110" y="898" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#C0C0D0">telas completamente quebradas ou inoperantes</text>
+
+  <!-- What we accept with lower value -->
+  <rect x="72" y="968" width="936" height="180" rx="16" fill="#071420" stroke="#0F2A40" stroke-width="1"/>
+  <text x="110" y="1018" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#3E82F7">✓ aceitamos com valor reduzido</text>
+  <text x="110" y="1066" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#C0C0D0">telas com pequenas trincas ou arranhões leves</text>
+  <text x="110" y="1114" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#C0C0D0">bateria com saúde entre 80%–85%</text>
+
+  <!-- CTA -->
+  <text x="540" y="1222" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#C0C0D0" text-anchor="middle">dúvida? manda dm com foto do aparelho.</text>
+  <text x="540" y="1268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#3E82F7" text-anchor="middle">a gente avalia de graça.</text>
+
+  <!-- Footer -->
+  <line x1="72" y1="1302" x2="1008" y2="1302" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="72" y="1336" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">@smartbase.cxs</text>
+  <text x="1008" y="1336" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#4A4A60">4 / 6</text>
+</svg>
