@@ -4,7 +4,11 @@
     "isolated": false,
     "userDataDir": "_opensquad/_browser_profile",
     "launchOptions": {
-      "headless": true
+      "headless": true,
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--ignore-certificate-errors"]
+    },
+    "contextOptions": {
+      "ignoreHTTPSErrors": true
     }
   }
 }
