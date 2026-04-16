@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBase — Prévia: Página Inicial da Loja</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <style>
+    .preview-bar {
+      background: #3E82F7;
+      color: #fff;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-family: sans-serif;
+    }
+    .preview-bar a { color: #fff; text-decoration: underline; margin: 0 8px; }
+  </style>
+</head>
+<body class="tray-page tray-page--home">
+
+  <div class="preview-bar">
+    Prévia da Loja Tray ·
+    <a href="home.html">Início</a>
+    <a href="catalog.html">Catálogo</a>
+    <a href="product.html">Produto</a>
+    <a href="cart.html">Carrinho</a>
+  </div>
+
+  <header class="tray-header" id="tray-header">
+    <div class="tray-header__inner">
+      <a href="home.html" class="tray-header__logo">
+        <div class="logo-pill">
+          <span class="logo-pill__dot"></span>
+          <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+        </div>
+      </a>
+      <form class="tray-header__search" role="search">
+        <input type="search" class="tray-search-input" placeholder="buscar produto…">
+        <button type="submit" class="tray-search-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </form>
+      <nav class="tray-header__nav">
+        <ul>
+          <li><a href="catalog.html" class="tray-nav-link">iPhone</a></li>
+          <li><a href="catalog.html" class="tray-nav-link">Mac</a></li>
+          <li><a href="catalog.html" class="tray-nav-link">iPad</a></li>
+          <li><a href="catalog.html" class="tray-nav-link">Acessórios</a></li>
+        </ul>
+      </nav>
+      <div class="tray-header__actions">
+        <a href="cart.html" class="tray-cart-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </a>
+        <button class="tray-hamburger" id="tray-hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="tray-mobile-nav" id="tray-mobile-nav" aria-hidden="true">
+      <a href="catalog.html" class="tray-nav-link">iPhone</a>
+      <a href="catalog.html" class="tray-nav-link">Mac</a>
+      <a href="catalog.html" class="tray-nav-link">iPad</a>
+      <a href="catalog.html" class="tray-nav-link">Acessórios</a>
+      <a href="cart.html" class="tray-nav-link">Carrinho (0)</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="tray-hero">
+      <div class="tray-container">
+        <div class="tray-hero__content">
+          <p class="tray-section-label">Apple a sério.</p>
+          <h1 class="tray-hero__title">tecnologia que<br><span class="tray-hero__accent">encaixa na sua vida.</span></h1>
+          <p class="tray-hero__sub">iPhones, Macs e iPads — novos e seminovos, com troca e consultoria incluídos. Atendemos Caxias do Sul e região.</p>
+          <div class="tray-hero__actions">
+            <a href="catalog.html" class="tray-btn tray-btn--primary tray-btn--lg">ver produtos</a>
+            <a href="https://wa.me/5554XXXXXXXX" class="tray-btn tray-btn--secondary tray-btn--lg" target="_blank">falar no WhatsApp</a>
+          </div>
+        </div>
+        <div class="tray-hero__badge-group">
+          <div class="tray-trust-badge"><span class="tray-trust-badge__num">100%</span><span class="tray-trust-badge__label">originais Apple</span></div>
+          <div class="tray-trust-badge"><span class="tray-trust-badge__num">3m</span><span class="tray-trust-badge__label">garantia seminovos</span></div>
+          <div class="tray-trust-badge"><span class="tray-trust-badge__num">24h</span><span class="tray-trust-badge__label">suporte pós-venda</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="tray-categories">
+      <div class="tray-container">
+        <p class="tray-section-label">navegue por categoria</p>
+        <div class="tray-categories__grid">
+          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">📱</div><p class="tray-category-card__name">iPhone</p><p class="tray-category-card__count">12 produtos</p></a>
+          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">💻</div><p class="tray-category-card__name">Mac</p><p class="tray-category-card__count">8 produtos</p></a>
+          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">🖥</div><p class="tray-category-card__name">iPad</p><p class="tray-category-card__count">5 produtos</p></a>
+          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">🎧</div><p class="tray-category-card__name">Acessórios</p><p class="tray-category-card__count">9 produtos</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="tray-section">
+      <div class="tray-container">
+        <div class="tray-section-head">
+          <div><p class="tray-section-label">mais vendidos</p><h2 class="tray-section-title">produtos em destaque.</h2></div>
+          <a href="catalog.html" class="tray-btn tray-btn--ghost">ver todos →</a>
+        </div>
+        <div class="tray-product-grid">
+
+          <article class="tray-product-card">
+            <a href="product.html" class="tray-product-card__image-link">
+              <div class="tray-product-card__image-wrap">
+                <div style="width:100%;aspect-ratio:1;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:64px;">📱</div>
+                <span class="tray-product-card__badge">novo</span>
+              </div>
+            </a>
+            <div class="tray-product-card__body">
+              <p class="tray-product-card__category">iPhone</p>
+              <h3 class="tray-product-card__name"><a href="product.html">iPhone 15 Pro 256GB Titânio</a></h3>
+              <div class="tray-product-card__pricing">
+                <p class="tray-product-card__price-from">R$ 8.499,00</p>
+                <p class="tray-product-card__price">R$ 7.499,00</p>
+                <p class="tray-product-card__installments">12x de R$ 624,92</p>
+              </div>
+              <div class="tray-product-card__actions"><a href="product.html" class="buy-button">Comprar</a></div>
+            </div>
+          </article>
+
+          <article class="tray-product-card">
+            <a href="product.html" class="tray-product-card__image-link">
+              <div class="tray-product-card__image-wrap">
+                <div style="width:100%;aspect-ratio:1;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:64px;">📱</div>
+                <span class="tray-product-card__badge tray-product-card__badge--used">seminovo</span>
+              </div>
+            </a>
+            <div class="tray-product-card__body">
+              <p class="tray-product-card__category">iPhone</p>
+              <h3 class="tray-product-card__name"><a href="product.html">iPhone 14 128GB Meia-noite</a></h3>
+              <div class="tray-product-card__pricing">
+                <p class="tray-product-card__price-from">R$ 4.299,00</p>
+                <p class="tray-product-card__price">R$ 3.799,00</p>
+                <p class="tray-product-card__installments">12x de R$ 316,58</p>
+              </div>
+              <div class="tray-product-card__actions"><a href="product.html" class="buy-button">Comprar</a></div>
+            </div>
+          </article>
+
+          <article class="tray-product-card">
+            <a href="product.html" class="tray-product-card__image-link">
+              <div class="tray-product-card__image-wrap">
+                <div style="width:100%;aspect-ratio:1;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:64px;">💻</div>
+                <span class="tray-product-card__badge">novo</span>
+              </div>
+            </a>
+            <div class="tray-product-card__body">
+              <p class="tray-product-card__category">Mac</p>
+              <h3 class="tray-product-card__name"><a href="product.html">MacBook Air M2 8GB 256GB</a></h3>
+              <div class="tray-product-card__pricing">
+                <p class="tray-product-card__price">R$ 9.999,00</p>
+                <p class="tray-product-card__installments">12x de R$ 833,25</p>
+              </div>
+              <div class="tray-product-card__actions"><a href="product.html" class="buy-button">Comprar</a></div>
+            </div>
+          </article>
+
+          <article class="tray-product-card">
+            <a href="product.html" class="tray-product-card__image-link">
+              <div class="tray-product-card__image-wrap">
+                <div style="width:100%;aspect-ratio:1;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:64px;">🎧</div>
+                <span class="tray-product-card__badge">novo</span>
+              </div>
+            </a>
+            <div class="tray-product-card__body">
+              <p class="tray-product-card__category">Acessórios</p>
+              <h3 class="tray-product-card__name"><a href="product.html">AirPods Pro 2ª Geração</a></h3>
+              <div class="tray-product-card__pricing">
+                <p class="tray-product-card__price">R$ 1.799,00</p>
+                <p class="tray-product-card__installments">12x de R$ 149,92</p>
+              </div>
+              <div class="tray-product-card__actions"><a href="product.html" class="buy-button">Comprar</a></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADE-IN -->
+    <section class="tray-tradein" id="troca">
+      <div class="tray-container">
+        <div class="tray-tradein__inner">
+          <div class="tray-tradein__text">
+            <p class="tray-section-label">troca inteligente</p>
+            <h2 class="tray-tradein__title">troque seu Apple<br>pelo próximo.</h2>
+            <p class="tray-tradein__sub">Avaliamos o seu aparelho atual e o crédito vai direto na compra. iPhones, Macs e iPads aceitos — avaliação gratuita.</p>
+            <a href="https://wa.me/5554XXXXXXXX" class="tray-btn tray-btn--primary tray-btn--lg" target="_blank">avaliar meu Apple →</a>
+          </div>
+          <div class="tray-tradein__steps">
+            <div class="tray-tradein__step"><span class="tray-tradein__step-num">1</span><div><p class="tray-tradein__step-title">Conta qual aparelho tem</p><p class="tray-tradein__step-desc">Modelo, capacidade e estado de conservação.</p></div></div>
+            <div class="tray-tradein__step"><span class="tray-tradein__step-num">2</span><div><p class="tray-tradein__step-title">Recebe a avaliação</p><p class="tray-tradein__step-desc">Preço justo, transparente, em menos de 2h.</p></div></div>
+            <div class="tray-tradein__step"><span class="tray-tradein__step-num">3</span><div><p class="tray-tradein__step-title">Aplica o crédito</p><p class="tray-tradein__step-desc">O valor vai direto no próximo produto.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="tray-section">
+      <div class="tray-container">
+        <p class="tray-section-label tray-text-center">por que a SmartBase</p>
+        <h2 class="tray-section-title tray-text-center">o padrão SmartBase.</h2>
+        <div class="tray-features-grid">
+          <div class="tray-feature"><span class="tray-feature__icon">📦</span><h3 class="tray-feature__title">Originais garantidos</h3><p class="tray-feature__desc">Novos e seminovos verificados. Checklist completo antes de sair daqui.</p></div>
+          <div class="tray-feature"><span class="tray-feature__icon">🛡</span><h3 class="tray-feature__title">Garantia real</h3><p class="tray-feature__desc">3 meses SmartBase nos seminovos. 1 ano Apple nos novos. Sem letras miúdas.</p></div>
+          <div class="tray-feature"><span class="tray-feature__icon">⚡</span><h3 class="tray-feature__title">Setup incluído</h3><p class="tray-feature__desc">Comprou aqui, sai usando. Configuramos e migramos seus dados na hora.</p></div>
+          <div class="tray-feature"><span class="tray-feature__icon">💬</span><h3 class="tray-feature__title">Consultoria real</h3><p class="tray-feature__desc">Sem script. A gente ouve e indica o produto certo pro seu caso.</p></div>
+          <div class="tray-feature"><span class="tray-feature__icon">🔄</span><h3 class="tray-feature__title">Troca facilitada</h3><p class="tray-feature__desc">Avaliação gratuita do seu aparelho. Crédito direto no próximo.</p></div>
+          <div class="tray-feature"><span class="tray-feature__icon">📍</span><h3 class="tray-feature__title">Somos de Caxias</h3><p class="tray-feature__desc">Loja local, atendimento humano. Você fala com quem realmente entende.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="tray-footer">
+    <div class="tray-container">
+      <div class="tray-footer__grid">
+        <div class="tray-footer__brand">
+          <div class="logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+          <p class="tray-footer__tagline">Apple a sério. Caxias do Sul e região, RS.</p>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Produtos</p>
+          <ul class="tray-footer__links">
+            <li><a href="catalog.html" class="tray-footer__link">iPhone</a></li>
+            <li><a href="catalog.html" class="tray-footer__link">Mac</a></li>
+            <li><a href="catalog.html" class="tray-footer__link">iPad</a></li>
+            <li><a href="catalog.html" class="tray-footer__link">Acessórios</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Loja</p>
+          <ul class="tray-footer__links">
+            <li><a href="#" class="tray-footer__link">Sobre nós</a></li>
+            <li><a href="#troca" class="tray-footer__link">Troca</a></li>
+            <li><a href="#" class="tray-footer__link">Contato</a></li>
+            <li><a href="#" class="tray-footer__link">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tray-footer__col-title">Contato</p>
+          <ul class="tray-footer__links">
+            <li><span class="tray-footer__link">📍 Caxias do Sul, RS</span></li>
+            <li><a href="https://wa.me/5554XXXXXXXX" class="tray-footer__link">💬 WhatsApp</a></li>
+            <li><a href="https://instagram.com/smartbase" class="tray-footer__link">📸 @smartbase</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tray-footer__bottom">
+        <p class="tray-footer__copy">© 2026 SmartBase. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5554XXXXXXXX" class="tray-whatsapp-fab" aria-label="WhatsApp" target="_blank">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
