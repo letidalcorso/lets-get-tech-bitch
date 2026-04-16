@@ -13,6 +13,10 @@
 <body class="tray-page tray-page--product">
   <div class="preview-bar">Prévia da Loja Tray · <a href="home.html">Início</a><a href="catalog.html">Catálogo</a><a href="product.html">Produto</a><a href="cart.html">Carrinho</a></div>
 
+  <div class="tray-order-banner">
+    <strong>Aparelhos novos são sob encomenda.</strong> Realizamos o pedido após sua confirmação. Prazo: 3 a 7 dias úteis. <a href="https://wa.me/5554XXXXXXXX" target="_blank">Saiba mais →</a>
+  </div>
+
   <header class="tray-header" id="tray-header">
     <div class="tray-header__inner">
       <a href="home.html" class="tray-header__logo"><div class="logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div></a>
@@ -37,7 +41,7 @@
         <div class="tray-product-gallery">
           <div class="tray-gallery-main" id="gallery-main">
             <div id="gallery-main-img" style="width:100%;aspect-ratio:1;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:120px;border-radius:var(--radius-md);">📱</div>
-            <span class="tray-product-badge">novo</span>
+            <span class="tray-product-badge" style="background:linear-gradient(135deg,#d97706,#f59e0b);">sob encomenda</span>
           </div>
           <div class="tray-gallery-thumbs" id="gallery-thumbs">
             <button class="tray-thumb is-active" type="button"><div style="width:80px;height:80px;background:var(--color-surface);display:flex;align-items:center;justify-content:center;font-size:32px;border-radius:8px;">📱</div></button>
@@ -51,7 +55,7 @@
           <p class="tray-product-info__category">iPhone</p>
           <h1 class="tray-product-info__name">iPhone 15 Pro 256GB Titânio Natural</h1>
           <p class="tray-product-info__ref">Ref: IP15PRO-256-TN</p>
-          <div class="tray-product-info__availability"><span class="tray-availability tray-availability--in">Em estoque</span></div>
+          <div class="tray-product-info__availability"><span class="tray-availability tray-availability--order">Sob encomenda</span></div>
           <div class="tray-product-info__pricing">
             <p class="tray-product-info__price-from">R$ 8.499,00</p>
             <p class="tray-product-info__price">R$ 7.499,00</p>
@@ -74,13 +78,19 @@
             </div>
           </div>
 
+          <div class="tray-order-notice-box">
+            <p><strong>Este produto é sob encomenda.</strong></p>
+            <p>Ao clicar em "Encomendar" você confirma o interesse. Nossa equipe entrará em contato via WhatsApp em até 2h para confirmar disponibilidade, prazo e pagamento.</p>
+            <p>Prazo estimado de entrega: <strong>3 a 7 dias úteis</strong> após confirmação.</p>
+          </div>
+
           <div class="tray-product-info__buy-row">
             <div class="tray-qty-control">
               <button class="tray-qty-btn" id="qty-dec" type="button">−</button>
               <input type="number" id="qty-input" class="tray-qty-input" value="1" min="1" max="10">
               <button class="tray-qty-btn" id="qty-inc" type="button">+</button>
             </div>
-            <div class="tray-product-info__buy-btn"><a href="cart.html" class="buy-button">Comprar</a></div>
+            <div class="tray-product-info__buy-btn"><a href="cart.html" class="buy-button">Encomendar</a></div>
           </div>
 
           <div class="tray-shipping-calc">
