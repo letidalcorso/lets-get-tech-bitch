@@ -78,56 +78,80 @@
   </nav>
 
   <main>
-    <!-- Hero -->
-    <section class="hero section--lg">
-      <div class="container">
-        <div class="hero-split">
-          <div class="hero__content" data-animate>
-            <span class="hero__eyebrow">Caxias do Sul e Região · RS</span>
-            <h1 class="hero__title">
-              feita pra quem<br>
-              leva a <span style="color: var(--color-signal)">Apple</span><br>
-              a sério.
-            </h1>
-            <p class="hero__subtitle">
-              iPhones, Macs e iPads — novos e seminovos — com
-              consultoria real, troca na hora e garantia de verdade.
-            </p>
-            <div class="hero__actions">
-              <a href="produtos.html" class="btn btn-primary btn-lg">Ver produtos</a>
-              <a href="#troca" class="btn btn-secondary btn-lg">Fazer troca →</a>
-            </div>
-            <div class="hero__location">
-              <span>📍</span>
-              <span>Caxias do Sul e região</span>
-            </div>
-          </div>
+    <!-- Banner Carrossel -->
+    <section class="hero-banner" id="hero-banner" aria-label="Banners principais">
 
-          <div class="hero-split__visual" data-animate data-delay="2">
-            <div class="hero-split__glow" aria-hidden="true"></div>
-            <!-- Imagem de produto a ser inserida -->
-            <div style="
-              width: 100%;
-              max-width: 420px;
-              aspect-ratio: 3/4;
-              background-color: var(--color-surface);
-              border-radius: var(--radius-xl);
-              border: 1px solid var(--color-border);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column;
-              gap: var(--space-4);
-            ">
-              <div class="logo-pill" style="font-size: var(--font-size-2xl);">
-                <span class="logo-pill__dot"></span>
-                <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
-              </div>
-              <p class="text-label text-sm">[ foto de produto ]</p>
+      <div class="hero-banner__track" id="banner-track">
+
+        <!-- SLIDE 1
+             → Troque o src abaixo pela foto real do banner desktop
+             → Para mobile, o Tray/site usa a mesma imagem (object-position ajusta o enquadramento)
+        -->
+        <div class="hero-banner__slide">
+          <img
+            src="images/banner-home-1.jpg"
+            alt="SmartBase — novos e seminovos com garantia"
+            class="hero-banner__img"
+            onerror="this.style.display='none'"
+          >
+          <!-- Placeholder enquanto não tem imagem -->
+          <div class="hero-banner__img" style="background: linear-gradient(135deg, #0F0F1C 0%, #1a1a2e 100%);"></div>
+          <div class="hero-banner__overlay"></div>
+          <div class="hero-banner__content">
+            <div class="hero-banner__logo logo-pill">
+              <span class="logo-pill__dot"></span>
+              <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+            </div>
+            <h1 class="hero-banner__title">sua apple store<br>particular.</h1>
+            <p class="hero-banner__sub">novos &amp; seminovos com garantia</p>
+            <div class="hero-banner__actions">
+              <a href="produtos.html" class="btn btn-primary btn-lg">ver produtos</a>
+              <a href="#troca" class="btn btn-secondary btn-lg">fazer troca →</a>
             </div>
           </div>
         </div>
+
+        <!-- SLIDE 2
+             → Troque o src abaixo pela segunda foto do banner
+        -->
+        <div class="hero-banner__slide">
+          <img
+            src="images/banner-home-2.jpg"
+            alt="SmartBase — iPhones, Macs e iPads"
+            class="hero-banner__img"
+            onerror="this.style.display='none'"
+          >
+          <div class="hero-banner__img" style="background: linear-gradient(135deg, #0F0F1C 0%, #0d1b2a 100%);"></div>
+          <div class="hero-banner__overlay"></div>
+          <div class="hero-banner__content">
+            <div class="hero-banner__logo logo-pill">
+              <span class="logo-pill__dot"></span>
+              <span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span>
+            </div>
+            <h1 class="hero-banner__title">troque seu Apple<br>pelo próximo.</h1>
+            <p class="hero-banner__sub">avaliação gratuita · crédito direto na compra</p>
+            <div class="hero-banner__actions">
+              <a href="contato.html" class="btn btn-primary btn-lg">avaliar agora →</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Setas de navegação -->
+      <button class="hero-banner__prev" id="banner-prev" aria-label="Banner anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="hero-banner__next" id="banner-next" aria-label="Próximo banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="hero-banner__dots" id="banner-dots" role="tablist" aria-label="Navegar entre banners">
+        <button class="hero-banner__dot is-active" role="tab" aria-label="Banner 1" data-index="0"></button>
+        <button class="hero-banner__dot" role="tab" aria-label="Banner 2" data-index="1"></button>
+      </div>
+
     </section>
 
     <!-- Stats -->
@@ -163,26 +187,51 @@
         </div>
 
         <div class="categories__grid">
+
+          <!-- → Troque o src por: images/banner-categoria-iphone.jpg -->
           <a href="produtos.html?cat=iphone" class="category-card" data-animate>
-            <div class="category-card__icon">📱</div>
-            <div class="category-card__name">iPhone</div>
-            <div class="category-card__count">novos e seminovos</div>
+            <img src="images/banner-cat-iphone.jpg" alt="iPhone" class="category-card__img" onerror="this.style.display='none'">
+            <div class="category-card__placeholder">📱</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label">
+              <span class="category-card__name">iPhone</span>
+              <span class="category-card__dot"></span>
+            </div>
           </a>
-          <a href="produtos.html?cat=mac" class="category-card" data-animate data-delay="1">
-            <div class="category-card__icon">💻</div>
-            <div class="category-card__name">Mac</div>
-            <div class="category-card__count">MacBook, iMac, Mac Mini</div>
+
+          <!-- → Troque o src por: images/banner-categoria-watch.jpg -->
+          <a href="produtos.html?cat=acessorios" class="category-card" data-animate data-delay="1">
+            <img src="images/banner-cat-watch.jpg" alt="Apple Watch" class="category-card__img" onerror="this.style.display='none'">
+            <div class="category-card__placeholder">⌚</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label">
+              <span class="category-card__name">Apple Watch</span>
+              <span class="category-card__dot"></span>
+            </div>
           </a>
+
+          <!-- → Troque o src por: images/banner-categoria-ipad.jpg -->
           <a href="produtos.html?cat=ipad" class="category-card" data-animate data-delay="2">
-            <div class="category-card__icon">🖥</div>
-            <div class="category-card__name">iPad</div>
-            <div class="category-card__count">todos os modelos</div>
+            <img src="images/banner-cat-ipad.jpg" alt="iPad" class="category-card__img" onerror="this.style.display='none'">
+            <div class="category-card__placeholder">🖥</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label">
+              <span class="category-card__name">iPad</span>
+              <span class="category-card__dot"></span>
+            </div>
           </a>
+
+          <!-- → Troque o src por: images/banner-categoria-acessorios.jpg -->
           <a href="produtos.html?cat=acessorios" class="category-card" data-animate data-delay="3">
-            <div class="category-card__icon">🎧</div>
-            <div class="category-card__name">Acessórios</div>
-            <div class="category-card__count">AirPods, Watch e mais</div>
+            <img src="images/banner-cat-acessorios.jpg" alt="Acessórios" class="category-card__img" onerror="this.style.display='none'">
+            <div class="category-card__placeholder">🎧</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label">
+              <span class="category-card__name">acessórios</span>
+              <span class="category-card__dot"></span>
+            </div>
           </a>
+
         </div>
       </div>
     </section>

@@ -68,35 +68,76 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="tray-hero">
-      <div class="tray-container">
-        <div class="tray-hero__content">
-          <p class="tray-section-label">Apple a sério.</p>
-          <h1 class="tray-hero__title">tecnologia que<br><span class="tray-hero__accent">encaixa na sua vida.</span></h1>
-          <p class="tray-hero__sub">iPhones, Macs e iPads — novos e seminovos, com troca e consultoria incluídos. Atendemos Caxias do Sul e região.</p>
-          <div class="tray-hero__actions">
-            <a href="catalog.html" class="tray-btn tray-btn--primary tray-btn--lg">ver produtos</a>
-            <a href="https://wa.me/5554XXXXXXXX" class="tray-btn tray-btn--secondary tray-btn--lg" target="_blank">falar no WhatsApp</a>
+    <!-- BANNER CARROSSEL -->
+    <section class="hero-banner" id="hero-banner" aria-label="Banners principais">
+      <div class="hero-banner__track" id="banner-track">
+
+        <div class="hero-banner__slide">
+          <div class="hero-banner__img" style="background: linear-gradient(135deg, #0F0F1C 0%, #1a1a2e 100%);"></div>
+          <div class="hero-banner__overlay"></div>
+          <div class="hero-banner__content">
+            <div class="hero-banner__logo logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+            <h1 class="hero-banner__title">sua apple store<br>particular.</h1>
+            <p class="hero-banner__sub">novos &amp; seminovos com garantia</p>
+            <div class="hero-banner__actions">
+              <a href="catalog.html" class="tray-btn tray-btn--primary tray-btn--lg">ver produtos</a>
+              <a href="#troca" class="tray-btn tray-btn--secondary tray-btn--lg">fazer troca →</a>
+            </div>
           </div>
         </div>
-        <div class="tray-hero__badge-group">
-          <div class="tray-trust-badge"><span class="tray-trust-badge__num">100%</span><span class="tray-trust-badge__label">originais Apple</span></div>
-          <div class="tray-trust-badge"><span class="tray-trust-badge__num">3m</span><span class="tray-trust-badge__label">garantia seminovos</span></div>
-          <div class="tray-trust-badge"><span class="tray-trust-badge__num">24h</span><span class="tray-trust-badge__label">suporte pós-venda</span></div>
+
+        <div class="hero-banner__slide">
+          <div class="hero-banner__img" style="background: linear-gradient(135deg, #0F0F1C 0%, #0d1b2a 100%);"></div>
+          <div class="hero-banner__overlay"></div>
+          <div class="hero-banner__content">
+            <div class="hero-banner__logo logo-pill"><span class="logo-pill__dot"></span><span><span class="wordmark-smart">smart</span><span class="wordmark-base">base</span></span></div>
+            <h1 class="hero-banner__title">troque seu Apple<br>pelo próximo.</h1>
+            <p class="hero-banner__sub">avaliação gratuita · crédito direto na compra</p>
+            <div class="hero-banner__actions">
+              <a href="https://wa.me/5554XXXXXXXX" class="tray-btn tray-btn--primary tray-btn--lg" target="_blank">avaliar agora →</a>
+            </div>
+          </div>
         </div>
+
+      </div>
+      <button class="hero-banner__prev" id="banner-prev" aria-label="Banner anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="hero-banner__next" id="banner-next" aria-label="Próximo banner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="hero-banner__dots" id="banner-dots">
+        <button class="hero-banner__dot is-active" data-index="0"></button>
+        <button class="hero-banner__dot" data-index="1"></button>
       </div>
     </section>
 
-    <!-- CATEGORIAS -->
+    <!-- CATEGORIAS COM FOTO -->
     <section class="tray-categories">
       <div class="tray-container">
         <p class="tray-section-label">navegue por categoria</p>
-        <div class="tray-categories__grid">
-          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">📱</div><p class="tray-category-card__name">iPhone</p><p class="tray-category-card__count">12 produtos</p></a>
-          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">💻</div><p class="tray-category-card__name">Mac</p><p class="tray-category-card__count">8 produtos</p></a>
-          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">🖥</div><p class="tray-category-card__name">iPad</p><p class="tray-category-card__count">5 produtos</p></a>
-          <a href="catalog.html" class="tray-category-card"><div class="tray-category-card__icon">🎧</div><p class="tray-category-card__name">Acessórios</p><p class="tray-category-card__count">9 produtos</p></a>
+        <div class="categories__grid">
+
+          <a href="catalog.html" class="category-card">
+            <div class="category-card__placeholder">📱</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label"><span class="category-card__name">iPhone</span><span class="category-card__dot"></span></div>
+          </a>
+
+          <a href="catalog.html" class="category-card">
+            <div class="category-card__placeholder">⌚</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label"><span class="category-card__name">Apple Watch</span><span class="category-card__dot"></span></div>
+          </a>
+
+          <a href="catalog.html" class="category-card">
+            <div class="category-card__placeholder">🖥</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label"><span class="category-card__name">iPad</span><span class="category-card__dot"></span></div>
+          </a>
+
+          <a href="catalog.html" class="category-card">
+            <div class="category-card__placeholder">🎧</div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__label"><span class="category-card__name">acessórios</span><span class="category-card__dot"></span></div>
+          </a>
+
         </div>
       </div>
     </section>

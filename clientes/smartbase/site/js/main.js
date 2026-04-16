@@ -141,3 +141,50 @@ style.textContent = `
   [data-animate][data-delay="4"] { transition-delay: 0.4s; }
 `;
 document.head.appendChild(style);
+
+/* ============================================================
+   BANNER CARROSSEL
+   ============================================================ */
+
+(function () {
+  const track   = document.getElementById('banner-track');
+  const prevBtn = document.getElementById('banner-prev');
+  const nextBtn = document.getElementById('banner-next');
+  const dotsEl  = document.getElementById('banner-dots');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.hero-banner__slide');
+  const dots   = dotsEl ? dotsEl.querySelectorAll('.hero-banner__dot') : [];
+  let current  = 0;
+  let timer;
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => { goTo(+dot.dataset.index); startAuto(); });
+  });
+
+  // Swipe touch
+  let startX = 0;
+  track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); startAuto(); }
+  });
+
+  startAuto();
+})();
