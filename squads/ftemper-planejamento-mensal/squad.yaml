@@ -1,11 +1,13 @@
 name: ftemper-planejamento-mensal
 description: >
-  Squad de estratégia e planejamento mensal de conteúdo para a FTemper.
-  Gera o plano estratégico do mês com distribuição pelos 4 pilares de conteúdo
-  e o calendário editorial com os 6 posts do Instagram (@ftempercomponentes),
-  incluindo formato, pilar, tema e briefing de cada post.
-version: "1.0.0"
+  Squad de planejamento e produção mensal de conteúdo para a FTemper.
+  Cobre todo o ciclo: investigação de mercado (Sherlock), estratégia e calendário
+  editorial (Fernanda + Lucas), aprovação da pauta, produção de copy e legendas
+  (Ana Copy), briefing visual e prompts (Sofia Visual) e criação das artes
+  no Figma (Valentina) — com checkpoints de aprovação em pontos críticos.
+version: "2.0.0"
 created: "2026-03-29"
+updated: "2026-04-05"
 client: ftemper
 mode: alta-performance
 
@@ -17,6 +19,10 @@ agents:
     path: ./agents/fernanda-estrategia.agent.md
   - id: lucas-calendario
     path: ./agents/lucas-calendario.agent.md
+  - id: ana-copy
+    path: ./agents/ana-copy.agent.md
+  - id: sofia-visual
+    path: ./agents/sofia-visual.agent.md
   - id: valentina-figma
     path: ./agents/valentina-figma.agent.md
 
@@ -28,15 +34,25 @@ pipeline:
   steps:
     - step: pipeline/steps/step-01-contexto-mes.md
       type: checkpoint
+    - step: pipeline/steps/step-02-sherlock.md
+      type: subagent
     - step: pipeline/steps/step-02-fernanda-estrategia.md
       agent: fernanda-estrategia
       execution: inline
     - step: pipeline/steps/step-03-lucas-calendario.md
       agent: lucas-calendario
       execution: inline
-    - step: pipeline/steps/step-04-aprovacao-final.md
+    - step: pipeline/steps/step-05-aprovacao-pauta.md
       type: checkpoint
+    - step: pipeline/steps/step-06-copywriter.md
+      agent: ana-copy
+      execution: inline
+    - step: pipeline/steps/step-07-art-director.md
+      agent: sofia-visual
+      execution: inline
     - step: pipeline/steps/step-05-valentina-figma.md
       agent: valentina-figma
       execution: inline
       optional: true
+    - step: pipeline/steps/step-04-aprovacao-final.md
+      type: checkpoint

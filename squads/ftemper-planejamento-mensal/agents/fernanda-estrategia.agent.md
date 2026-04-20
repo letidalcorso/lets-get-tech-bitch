@@ -74,6 +74,8 @@ O Plano Estratégico do Mês deve conter:
 
 ## Integration
 
-- **Reads from:** clientes/ftemper/briefing.md, output do step-01 (contexto do mês informado pelo usuário)
+- **Reads from:** clientes/ftemper/briefing.md, output do step-01 (contexto do mês informado pelo usuário), `squads/ftemper-planejamento-mensal/_investigations/sintese-mercado.md` (síntese do Sherlock — quando disponível)
 - **Writes to:** output/{run-folder}/plano-estrategico.md
 - **Feeds:** lucas-calendario (usa o plano como base para o calendário editorial)
+
+> **Nota:** Ao iniciar o Step 03, verificar se existe o arquivo `_investigations/sintese-mercado.md` gerado pelo Sherlock (Step 02). Se existir, incorporar os insights de mercado ao plano — especialmente tendências e oportunidades de diferenciação identificadas na análise dos concorrentes.
